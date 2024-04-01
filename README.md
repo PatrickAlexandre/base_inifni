@@ -1,4 +1,11 @@
- # Tableau de Bord du Personnel LibertyTech
+ # 👨‍💻 infini
+
+## Code 🐛
+
+- views/auth/signup.ejs => (formulaire) Inscription
+- services/auth.js => signup
+- 
+- IA <=> User (Données d'analyse + Feedback)
 
 ## Advertising 📢
 
@@ -42,3 +49,5 @@
 - **Avantages** : Transformation de la gestion des données, amélioration des soins aux patients.
 - **Résultat** : Signature d'un contrat pluriannuel, partenariat stratégique à long terme.
 - **Revenu** : Significatif pour LibertyTech.
+
+# Radio

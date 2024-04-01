@@ -1,0 +1,65 @@
+         /* Add more custom styles for "Client_AddOn" */
+		.client {
+		  width: 100%;
+		  max-width: 350px; /* Limite pour les écrans plus larges */
+		  background-color: #f0f0f0; /* Couleur de fond légère */
+		  padding: 20px;
+		  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre subtile pour le relief */
+		  margin: auto; /* Centrer dans un conteneur plus large */
+		  border-radius: 8px; /* Bords arrondis */
+		}
+
+		.playerinfos img.hp-icon {
+		  width: 50px; /* Taille de l'icône */
+		  height: auto;
+		  display: block;
+		  margin: 0 auto 10px; /* Centrer l'icône avec une marge en dessous */
+		}
+
+		.playerinfos h2 {
+		  color: #333; /* Couleur du texte sombre pour le contraste */
+		  font-size: 16px; /* Taille de police */
+		  margin: 10px 0; /* Marge autour des titres pour l'espacement */
+		}
+
+		.status-bar {
+		  background-color: #ddd; /* Couleur de fond des barres de statut */
+		  border-radius: 5px; /* Bords arrondis des barres */
+		  overflow: hidden; /* Garde la barre remplie à l'intérieur des coins arrondis */
+		  height: 20px; /* Hauteur des barres de statut */
+		  margin-bottom: 15px; /* Marge en dessous de chaque barre */
+		}
+
+		.status-bar-filled {
+		  height: 100%; /* Assurez-vous que la barre remplie s'étend sur toute la hauteur */
+		  background-color: #76b852; /* Couleur verte pour les barres remplies */
+		  transition: width 0.3s ease; /* Transition douce pour les changements de largeur */
+		}
+
+		/* Personnalisation des couleurs pour chaque barre */
+		.life-bar .status-bar-filled { background-color: #e74c3c; } /* Rouge pour la vie */
+		.calories-bar .status-bar-filled { background-color: #f1c40f; } /* Jaune pour les calories */
+		.energy-bar .status-bar-filled { background-color: #3498db; } /* Bleu pour l'énergie */
+
+		.icon-with-level {
+		  position: relative; /* Permet le positionnement absolu du niveau à l'intérieur */
+		  display: inline-block; /* Permet à l'icône de se situer à côté du texte */
+		  vertical-align: middle; /* Alignement vertical avec le texte des stats */
+		}
+
+		.icon-with-level .hp-icon {
+		  width: 50px; /* Taille de l'icône ajustée */
+		  height: auto;
+		}
+
+		.icon-with-level .level {
+		  position: absolute; /* Positionnement absolu par rapport à son parent relatif */
+		  bottom: 0; /* En bas à droite de l'icône */
+		  right: 0;
+		  background-color: #000; /* Fond sombre pour le niveau */
+		  color: #fff; /* Texte blanc pour le niveau */
+		  font-size: 12px; /* Petite taille de police pour le niveau */
+		  padding: 2px 4px; /* Petit rembourrage autour du texte du niveau */
+		  border-radius: 50%; /* Rend le fond du niveau circulaire */
+		}
+        

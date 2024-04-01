@@ -4,8 +4,11 @@
   <nav class="main-header__nav">
     <ul class="main-header__item-list">
       <li class="main-header__item main-header__title">
-        <a class="<%= path === '/' ? 'active' : '' %>" href="/">My Webshop</a>
+        <a class="<%= path === '/' ? 'active' : '' %>" href="/">Liberté Financière</a>
       </li>
+      <li>
+        <%- include('../includes/brands_social.ejs') %>
+      </li>      
       <% if (isAuthenticated) { %>
         <% if (isAdmin) { %>
           <li class="main-header__item">
@@ -20,15 +23,22 @@
         <a class="<%= path === '/about' ? 'active' : '' %>" href="/about">About</a>
       </li>
       <li class="main-header__item">
+        <a class="<%= path === '/creator' ? 'active' : '' %>" href="/creator">CREATOR</a>
+      </li>        
+      <li class="main-header__item">
+        <a class="<%= path === '/calorie' ? 'active' : '' %>" href="/calorie">  SUPERCOOK   </a>
+      </li>      
+      <li class="main-header__item">
         <a class="<%= path === '/contact' ? 'active' : '' %>" href="/contact">Contact</a>
       </li>
-      <% if (!isAuthenticated) { %>
+      <% if (!isAuthenticated) { %>   
         <li class="main-header__item">
           <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Sign Up</a>
         </li>
+        <!-- Google Sign-In button -->
         <li class="main-header__item">
-          <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Log In</a>
-        </li>
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        </li>        
       <% } else { %>
         <li class="main-header__item">
           <a class="<%= path === '/mypage' ? 'active' : '' %>" href="/mypage">My Page</a>
@@ -52,6 +62,9 @@
 
 <nav class="mobile-nav">
   <ul class="mobile-nav__item-list">
+    <li>
+      <%- include('../includes/brands_social.ejs') %>
+    </li>
     <li class="mobile-nav__item">
       <a class="<%= path === '/' ? 'active' : '' %>" href="/">Home</a>
     </li>
@@ -68,7 +81,8 @@
     <% } %>
     <% if (!isAuthenticated) { %>
       <li class="mobile-nav__item">
-        <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Login</a>
+        <!-- Google Sign-In button -->
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
       </li>
       <li class="mobile-nav__item">
         <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Sign Up</a>

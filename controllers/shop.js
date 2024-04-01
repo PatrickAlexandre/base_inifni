@@ -150,6 +150,12 @@ const getAbout = (req, res, next) => {
     path: '/about',
   });
 };
+const getTest = (req, res, next) => {
+  res.render('shop/test', {
+    pageTitle: 'Services 🚀 Transformez votre Entreprise avec Excellence',
+    path: '/about',
+  });
+};
 const getContact = (req, res, next) => {
   res.render('shop/contact', {
     pageTitle: 'About',
@@ -218,6 +224,7 @@ module.exports = {
   getCheckoutSuccess,
   getOrders,
   getAbout,
+  getTest,  
   getContact,
   getMyPage,
   getShipment,

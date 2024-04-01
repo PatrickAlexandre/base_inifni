@@ -1,12 +1,18 @@
-<%- include('../includes/head.ejs') %>
-  </head>
-<script>
-  function onSubmit(token) {
-    document.getElementById("signup-form").submit();
-  }
-</script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Incluye los metadatos y archivos de estilo comunes -->
+  <% include('../includes/head.ejs') %>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("signup-form").submit();
+    }
+  </script>
+</head>
 <body>
-  <%- include('../includes/navigation.ejs') %>
+  <!-- Navegación -->
+  <% include('../includes/navigation.ejs') %>
+
   <div class="uk-section uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport>
     <div class="uk-container">
       <% if (errorMessage) { %>
@@ -15,28 +21,31 @@
           <p><%= errorMessage %></p>
         </div>
       <% } %>
+
       <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
-        <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body">
-          <h3 class="uk-text-center ui-card-title">Sign-Up</h3>
+        <div class="uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body">
+          <h3 class="uk-text-center">Sign-Up</h3>
           <form id="signup-form" action="/signup" method="POST" novalidate>
             <div class="uk-margin">
-              <div class="ui-text-field">Email</div>
-              <input name="email" id="email" class="ui-input uk-input uk-form-medium" type="text" value="<%= oldInput.email %>">
+              <label for="email" class="ui-text-field">Email</label>
+              <input name="email" id="email" class="ui-input uk-input uk-form-medium" type="email" value="<%= oldInput.email %>" required>
             </div>
             <div class="uk-margin">
-              <div class="ui-text-field">Password</div>
-              <input name="password" id="password" class="ui-input uk-input uk-form-medium" type="password" value="<%= oldInput.password %>">
+              <label for="password" class="ui-text-field">Password</label>
+              <input name="password" id="password" class="ui-input uk-input uk-form-medium" type="password" value="<%= oldInput.password %>" required>
             </div>
             <div class="uk-margin">
-              <div class="ui-text-field">Confirm Password</div>
-              <input name="confirmPassword" id="confirmPassword" class="ui-input uk-input uk-form-medium" type="password" value="<%= oldInput.confirmPassword %>">
+              <label for="confirmPassword" class="ui-text-field">Confirm Password</label>
+              <input name="confirmPassword" id="confirmPassword" class="ui-input uk-input uk-form-medium" type="password" value="<%= oldInput.confirmPassword %>" required>
             </div>
-            <div class="uk-margin uk-text-center">
-              <button class="g-recaptcha uk-button uk-button-primary uk-text-capitalize" type="submit" data-sitekey="<%= recaptchaSiteKey %>" data-callback="onSubmit" data-action="submit">Sign Up</button>
-            </div>
+            <button type="submit" class="uk-button uk-button-default">Submit</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-  <%- include('../includes/end.ejs') %>
+
+  <!-- Pie de página y scripts -->
+  <% include('../includes/end.ejs') %>
+</body>
+</html>

@@ -1,0 +1,147 @@
+body, html {
+    /* SCREEN absolute = height: 100%; */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa; /* Light blue for Acquisition */
+    cursor: url('LEO.png'), auto; /* Assuming 'LEO.png' exists and is accessible, corrected syntax */
+}
+
+#gameUI {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+.ui-element {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.ui-user {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.ui-user h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ui-user .statistic-item {
+    margin-bottom: 8px;
+}
+
+.ui-user .stat-label {
+    font-weight: bold;
+    color: #666;
+}
+
+.ui-user .stat-value {
+    color: #333;
+}
+
+.ui-user .progress-bar {
+    height: 10px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.ui-user .progress-bar-fill {
+    background-color: #4caf50;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.UX_1 {
+    margin: 3px;
+    padding: 5px 3px 1px 3px; /* Ajustement précis du padding pour aligner le contenu */
+    /* Suppression de border: 1px solid #0077cc; */
+    box-shadow: 0 0 8px #f1c40f; /* Effet de lumière dorée pour profondeur et accent */
+    color: #3fc7eb;
+    background-clip: padding-box; /* Applique le fond seulement jusqu'au padding */
+    border: solid 1px transparent; /* Crée l'effet de bordure avec le fond */
+    border-radius: 10px; /* Bords arrondis pour une esthétique moderne et douce */
+}
+
+.UX_1:hover {
+    cursor: none; /* Rend le curseur invisible au survol */
+    transform: scale(2); /* Augmente légèrement la taille */
+    transition: transform 0.200s ease; /* Rend la transition douce */
+    background: linear-gradient(180deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3), #8788ee; /* Gradient arc-en-ciel */
+}
+
+.ui-miniMap {
+    margin: 10px;
+    padding: 5px 3px 1px 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+#Quest_Log {
+    background-color: #0074D9; /* Dark blue for Retention */
+    flex: 1 1 215px;
+}
+
+.message.bot {
+    color: navy; /* Couleur du texte en bleu navy */
+    background-color: transparent; /* Couleur de fond transparente */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Ajout d'un box-shadow pour un effet d'ombre */
+}
+/* Cible les messages des bots et applique une transformation au survol */
+/* Curseur custom [UX] cursor: url('../controllers/Cursor_Basic-Clic.png'), auto; */
+.message.bot:hover {
+    cursor: move;    
+    transform: scale(1.05); /* Augmente légèrement la taille */
+    transition: transform 0.3s ease; /* Rend la transition douce */   
+}
+
+#actionBars, #Profil {
+    background-color: #ffd700; /* Gold for Revenue */
+    flex: 1 1 100%;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: crosshair; /* Consider if 'crosshair' is appropriate for both or if 'zoom-in' was specifically intended for '#Profil' */
+}
+
+iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #575757;
+}
+
+.action-bars-menu {
+    padding: 5px 10px;
+    margin-left: 20px;
+    background-color: #4C4C4C;
+    color: #FFF;
+    border: 1px solid #666;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-bars-menu:focus {
+    outline: none;
+    border-color: #FFD700;
+}
