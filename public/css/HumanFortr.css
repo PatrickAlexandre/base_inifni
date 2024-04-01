@@ -95,7 +95,8 @@ body, html {
 
 
 #Quest_Log {
-    background-color: #0074D9; /* Dark blue for Retention */
+    background-color: #ff7c0a; /* Drood Color for Universe */
+                /* background-color: #0074D9;  Dark blue for Retention */
     flex: 1 1 215px;
 }
 

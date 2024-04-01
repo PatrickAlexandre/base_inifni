@@ -38,18 +38,6 @@
 
 <!-- 📜 {Liste des Quêtes : 17/20} -->
 <div id="Quest_Log" class="ui-element">
-    <div id="questLog">
-        <img src="https://wow.zamimg.com/images/wow/icons/tiny/quest-start-daily.gif" alt="Quest">	
-        Quests 17 / 20
-            <!-- Les routines seront injectées ici via SQL -->
-    </div>
-
-    <div id="questLog">
-        <img src="https://wow.zamimg.com/images/wow/icons/tiny/quest-start.gif" alt="Quest">	
-        Bonus Objectives
-            <!-- Les XP Bonus / Buffs seront calculés ici via JavaScript -->
-    </div>
-    
     <!-- MiniMap Section Begins Here -->
     <div class="ui-miniMap">
         <div class="mini-map">
@@ -65,9 +53,26 @@
     </div>
     <!-- MiniMap Section Ends Here -->
 
+
+
+
+    <div id="questLog">
+        <img src="https://wow.zamimg.com/images/wow/icons/tiny/quest-start-daily.gif" alt="Quest">	
+        Quests 17 / 20
+            <!-- Les routines seront injectées ici via SQL -->
+    </div>
+
+    <div id="questLog">
+        <img src="https://wow.zamimg.com/images/wow/icons/tiny/quest-start.gif" alt="Quest">	
+        Bonus Objectives
+            <!-- Les XP Bonus / Buffs seront calculés ici via JavaScript -->
+    </div>
+    
+
+
     <div id="pomodoroTimer">
         <!-- ⏳ minuteur, Pomodoro -->
-        <iframe src="https://flocus.com/minimalist-pomodoro-timer/" frameborder="0" width="300" height="400"></iframe>
+        <iframe src="https://app.flocus.com/" frameborder="0" width="210" height="420"></iframe>
     </div>
 
     <script src="script_How.js"></script> <!-- Assurez-vous que le chemin vers votre fichier JavaScript est correct -->
@@ -86,17 +91,17 @@
             <!-- include('../includes/brands_social.ejs') - Ceci est un exemple d'inclusion serveur-side qui devrait être traité côté serveur. -->
 
             <!-- Exemple de messages -->
-            <div class="message bot">🧙‍♂️LEO : Bonjour ! Comment puis-je vous aider aujourd'hui ?</div>
-            <div class="message bot">Commerce 🗡️ : Livraison de {potion de mana}, {5} pièces d'or l'unité.</div>
-            <div class="message bot">ECO 🌿 : Achète peaux de bête, jusqu'à 10 pièces d'or selon qualité.</div>
+            <div class="message bot">🧙‍♂️LEO | Bonjour ! Comment puis-je vous aider aujourd'hui ?</div>
+            <div class="message bot">2. Commerce 🗡️ Battleground = 8M | Livraison de {potion de mana}, {5} pièces d'or l'unité.</div>
+            <div class="message bot">3. ECO 🌿 | Achète peaux de bête, jusqu'à 10 pièces d'or selon qualité.</div>
         </div>
 
         <!-- Les messages envoyés au chat GENERAL, SQL & Express & Node seront ajoutés ici -->
-        <div class="prompt message user" style="background-color: #212121; color: #ececec; align-self: flex-end; border: 1px solid #d0e0f0;">Comment puis-je vous aider aujourd'hui ?
+<div class="prompt message user" style="background-color: #212121; color: #ececec; display: flex; justify-content: center; align-items: center; border: 1px solid #d0e0f0; padding: 10px;">
             <form action="/your-endpoint-here" method="post">
 
-        <button type="button" title="Importer">📎</button>
-<textarea name="user_message" placeholder="Message @... " rows="1"></textarea>
+        <button type="button" title="Importer">Importer 📎</button>
+<textarea name="user_message" placeholder="Prompt @... "  style="color: #ff7c0a;" rows="1"></textarea>
         <input type="submit" value="📩">
             </form>
         </div>
@@ -232,53 +237,7 @@
 
 
 		
-<div id="actionBarsContainer" class="ui-element action-bars-container">
-    <!--AddOns Included
-        >ActionBar
-        >Grid
-        >Menu
-        >list
-        >change
-    -->
 
-	<h1>Masse; Réserve; /L | /Kg /$</h1>
-    <div id="Grande" title="Grange">
-    
-		<!-- Profil + Réserve-->
-		<div class="icon-bar flex items-center justify-between p-5">
-		
-			<div id="" class="ui-user" title="➡️ #XP #User #Client">Quêtes & Stuff & Utilisateur
-			<!-- Lame-tonnerre, épée bénie du Cherchevent -->
-			<img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_39.jpg" alt="Lame-tonnerre" class="mx-2">
-
-			<!-- Ashbringer (Cendrelangue) -->
-			<img src="chemin/vers/Ashbringer.png" alt="Ashbringer" class="mx-2">
-
-			<!-- Couronne de glace (Lich King's Helm) -->
-			<img src="chemin/vers/Couronne-de-glace.png" alt="Couronne de glace" class="mx-2">
-
-			<!-- League of Legends (en France) -->
-			<!-- Yasuo -->
-			<img src="chemin/vers/Yasuo.png" alt="Yasuo" class="mx-2">
-
-			<!-- Zed -->
-			<img src="chemin/vers/Zed.png" alt="Zed" class="mx-2">
-
-			<!-- Ahri -->
-			<img src="chemin/vers/Ahri.png" alt="Ahri" class="mx-2">
-			</div>		
-		
-			<img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_13.jpg" alt="Bag5" class="mx-2">		
-			<img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_13.jpg" alt="Bag4" class="mx-2">
-			<img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_13.jpg" alt="Bag3" class="mx-2">
-			<img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_10_black.jpg" alt="Bag1" class="mx-2">
-			<img src="C:\Users\Eazy-Peazy\Desktop\Interface (+Javascript)\Physique\ACTION\inv_misc_bag_27.jpg" alt="Bag0" class="mx-2">
-		</div>
-	
-	</div>
-
-	
-</div>
 
 
 
@@ -293,8 +252,66 @@
     <div class="item" style="top: 100px; left: 100px;" id="item"></div>
 </div>
 
-</div>
+    </div>
     <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--AddOns Included
+    >ActionBar
+    >Grid
+    >Menu
+    >list
+    >change
+-->
+<div id="actionBarsContainer" class="ui-element action-bars-container">
+    <h2>Masse; Réserve; /L | /Kg /$</h2>
+
+    <div id="Grande" title="Grange">
+    <!-- Profil + Réserve-->
+                            <div class="icon-bar flex items-center justify-between p-5">
+                            <div id="" class="ui-user" title="➡️ #User #Client #EXP OnHover">Quêtes & Stuff & Utilisateur
+                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_39.jpg" alt="Lame-tonnerre" class="mx-2">
+                            <img src="chemin/vers/Ashbringer.png" alt="Ashbringer" class="mx-2">
+                            <img src="chemin/vers/Couronne-de-glace.png" alt="Couronne de glace" class="mx-2">
+                            <img src="chemin/vers/Yasuo.png" alt="Yasuo" class="mx-2">
+                            <img src="chemin/vers/Zed.png" alt="Zed" class="mx-2">
+                            <img src="chemin/vers/Ahri.png" alt="Ahri" class="mx-2"> -->
+                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_gizmo_02.jpg" alt="Ingénieur" class="mx-2">
+                            </div>	
+                            </div>
+
+                            <style>
+                            .bag-img {
+                            border-radius: 10px; /* ajustez la valeur selon votre préférence pour le degré d'arrondi */
+                            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* ajustez les valeurs pour l'ombre portée selon vos besoins */
+                            }
+                            .rounded-circle {
+                            border-radius: 33.333%;
+                            }
+                            </style>
+                            <img src="https://wow.zamimg.com/images/wow/icons/large/ui_sigil_kyrian.jpg" alt="Foyer" class="mx-2 rounded-circle">
+                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_13.jpg" alt="Bag5" class="mx-2 bag-img">     
+                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_13.jpg" alt="Bag4" class="mx-2 bag-img">
+                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_13.jpg" alt="Bag3" class="mx-2 bag-img">
+                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_27.jpg" alt="Bag1" class="mx-2 bag-img">
+
+    </div>
+
+<!--<AddOn> actionBarsContainer-->
+</div>
+
+
+
     <script>
         const player = document.getElementById('player');
         const item = document.getElementById('item');
