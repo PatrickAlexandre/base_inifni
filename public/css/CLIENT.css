@@ -1,13 +1,14 @@
          /* Add more custom styles for "Client_AddOn" */
-		.client {
-		  width: 100%;
-		  max-width: 350px; /* Limite pour les écrans plus larges */
-		  background-color: #f0f0f0; /* Couleur de fond légère */
-		  padding: 20px;
-		  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre subtile pour le relief */
-		  margin: auto; /* Centrer dans un conteneur plus large */
-		  border-radius: 8px; /* Bords arrondis */
-		}
+	.client {
+		width: 100%;
+		max-width: 350px; /* Limite pour les écrans plus larges */
+		padding: 20px;
+		background-color: #0074D9;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Ombre subtile avec une visibilité légèrement augmentée */
+		margin: auto; /* Centrer dans un conteneur plus large */
+		border-radius: 8px; /* Bords arrondis */
+	}
+
 
 		.playerinfos img.hp-icon {
 		  width: 50px; /* Taille de l'icône */
@@ -52,14 +53,15 @@
 		  height: auto;
 		}
 
-		.icon-with-level .level {
-		  position: absolute; /* Positionnement absolu par rapport à son parent relatif */
-		  bottom: 0; /* En bas à droite de l'icône */
-		  right: 0;
-		  background-color: #000; /* Fond sombre pour le niveau */
-		  color: #fff; /* Texte blanc pour le niveau */
-		  font-size: 12px; /* Petite taille de police pour le niveau */
-		  padding: 2px 4px; /* Petit rembourrage autour du texte du niveau */
-		  border-radius: 50%; /* Rend le fond du niveau circulaire */
-		}
+.icon-with-level .level {
+    position: absolute; /* Positionnement absolu par rapport à son parent relatif */
+    bottom: 0; /* En bas à droite de l'icône */
+    right: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour le niveau */
+    color: #ffffff; /* Texte sombre pour contraster avec le fond vert clair */
+    font-size: 12px; /* Petite taille de police pour le niveau */
+    padding: 2px 4px; /* Petit rembourrage autour du texte du niveau */
+    border-radius: 50%; /* Rend le fond du niveau circulaire */
+}
+
         

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="C:\Users\Eazy-Peazy\3D Objects\Leo_Logo.png">	
+
     <title>UNI |verse	🚀 Welcome to our assistant  🧙‍♂️   	LEO</title>
+    <link rel="icon" type="image/png" href="C:\Users\Eazy-Peazy\3D Objects\Leo_Logo.png">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 	<script src="https://cdn.tailwindcss.com"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<style>
 	  /* Additional styles if needed */
 	  .icon-bar {
@@ -25,7 +26,23 @@
 <div id="gameUI">
 <%- include('../game/CLIENT.ejs') %>
 
+
+
+
+
+
+
+
+
 <div class="UX_1">
+
+    <select id="Hunter" title="16personalities" class="pistage-menu">Vue:
+        <option value="energy">Énergie</option>
+        <option value="frequency">Fréquence</option>
+        <option value="vibration">Vibration</option>
+    </select>   
+
+
 <!--	Résultats= = [BUFFS] & [Débuffs] "ECO", "5 sens", "Émotions" = Calcul = Résultat = Diagram</span>DALL-E | Mind-map | TRUE or FALSE | VIDEO -->		
 <!-- "ECO", "5 sens", "Émotions" = Calcul = Résultat = Diagram -->		
 
@@ -35,18 +52,19 @@
     <!-- !!! Javascript Physics = Buffs here !!! -->
 </div>	
 
+ 
+
+
+
+
+
 
 <!-- 📜 {Liste des Quêtes : 17/20} -->
 <div id="Quest_Log" class="ui-element">
     <!-- MiniMap Section Begins Here -->
     <div class="ui-miniMap">
         <div class="mini-map">
-            <select id="actionBarsMenu" class="action-bars-menu">Vue:
-                <option value="energy">Énergie</option>
-                <option value="frequency">Fréquence</option>
-                <option value="vibration">Vibration</option>
-            </select>
-
+            Portail : <span>Thunder Bluff</span>
             <!-- Embedding Google Maps -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.1002508063453!2d-122.08449308461725!3d37.42264088052514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e8a0f9e71b5%3A0x5aa45fd7495e1694!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1614665800225!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
         </div>
@@ -67,21 +85,16 @@
         Bonus Objectives
             <!-- Les XP Bonus / Buffs seront calculés ici via JavaScript -->
     </div>
-    
 
-
-    <div id="pomodoroTimer">
-        <!-- ⏳ minuteur, Pomodoro -->
-        <iframe src="https://app.flocus.com/" frameborder="0" width="210" height="420"></iframe>
-    </div>
-
-    <script src="script_How.js"></script> <!-- Assurez-vous que le chemin vers votre fichier JavaScript est correct -->
 </div>
 
 
-		
+<!-- ⏳ minuteur, Pomodoro -->
+    <iframe src="https://app.flocus.com/" frameborder="0" width="210" height="420"></iframe>
 
-<!-- AI -->
+
+
+<!--Chat=AI-Assistant_LEO+SQL-->
 <div id="chatContainer" class="chat-container">
     <!-- Suppression de la partie non valide "@ChatGPT 4.0 = 20€" -->
 
@@ -124,27 +137,156 @@
 </div>-->
 
     <div class="shopify-like-section p-4 mt-4" style="background-color: #7af2c0;">
-        <h2>Featured Products</h2>
-        <div class="product-grid grid grid-cols-3 gap-4">
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Product 1 Image">
-                <h3>Product 1</h3>
-                <p>Description of product 1.</p>
-                <a href="#">Learn More</a>
+    User_<h1>Auction</h1>        
+    <body class="bg-gray-900 text-white">
+        <div class="container mx-auto mt-8">
+            <div class="grid grid-cols-1 gap-4">
+
+
+<section  style="display: none;" class="service-offerings">
+        <!-- Copywriting Services -->
+        <article class="bg-gray-800 p-4 rounded-md flex justify-between items-center">
+            <div class="flex items-center">
+            <figure>
+                <img src="https://i.ytimg.com/vi/ntiSrrr_zYg/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGCUgEyh_MA8=&rs=AOn4CLBYjqvEhyPTofKUfUA9Kwk4SdrfrA" alt="Copywriting Services" class="rounded-lg mr-4" width="150" height="150">
+                <figcaption class="sr-only">Copywriting Services</figcaption>
+            </figure>
+            <div>
+                <h3 class="font-bold">Rédacteur, Copywriting, SEO</h3>
+                <ul>
+                <li>Description de produits: Optimisez vos fiches produits pour une meilleure conversion (à partir de 20€ par produit)</li>
+                <li>Articles de blog: Attirez et fidélisez votre audience avec du contenu engageant (à partir de 0,10€ par mot)</li>
+                <li>Pages web: Créez des pages web impactantes et optimisées pour le SEO (à partir de 150€ par page)</li>
+                <li>Slogans et accroches: Démarquez-vous avec des messages percutants (à partir de 50€ par slogan)</li>
+                </ul>
             </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Product 2 Image">
-                <h3>Product 2</h3>
-                <p>Description of product 2.</p>
-                <a href="#">Learn More</a>
             </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Product 3 Image">
-                <h3>Product 3</h3>
-                <p>Description of product 3.</p>
-                <a href="#">Learn More</a>
+            <div class="text-right">
+            <p class="font-bold">Qualité</p>
+            <p>Prix</p>
             </div>
+        </article>
+        
+        <!-- Speaker Services -->
+        <article class="bg-gray-800 p-4 rounded-md flex justify-between items-center">
+            <div class="flex items-center">
+            <figure>
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_shirt_guildtabard_01.jpg" alt="Icon representing Speaker Services" class="rounded-lg mr-4">
+                <figcaption class="sr-only">Speaker Services</figcaption>
+            </figure>
+            <div>
+                <h3 class="font-bold">Speaker</h3>
+                <ul>
+                <li>Conférences: Captivez votre audience avec des présentations percutantes (à partir de 500€ par intervention)</li>
+                <li>Webinaires: Partagez votre expertise et générez des leads (à partir de 300€ par webinaire)</li>
+                <li>Ateliers: Offrez à vos clients une expérience immersive et pédagogique (à partir de 200€ par atelier)</li>
+                </ul>
+            </div>
+            </div>
+            <div class="text-right">
+            <p class="font-bold">Qualité</p>
+            <p>Prix</p>
+            </div>
+        </article>
+        
+        <!-- Design Services -->
+        <article class="bg-gray-800 p-4 rounded-md flex justify-between items-center">
+            <div class="flex items-center">
+            <figure>
+                <img src="https://placehold.co/50x50" alt="Icon representing Design Services" class="rounded-lg mr-4">
+                <figcaption class="sr-only">Design Services</figcaption>
+            </figure>
+            <div>
+                <h3 class="font-bold">Design</h3>
+                <ul>
+                <li>Logos: Affirmez votre identité visuelle avec un logo unique (à partir de 200€)</li>
+                <li>Charte graphique: Définissez les codes visuels de votre marque (à partir de 500€)</li>
+                <li>Supports de communication: Flyers, brochures, plaquettes... pour une communication impactante (à partir de 100€ par support)</li>
+                <li>Web design: Créez un site web attractif et performant (à partir de 1500€)</li>
+                </ul>
+            </div>
+            </div>
+            <div class="text-right">
+            <p class="font-bold">Qualité</p>
+            <p>Prix</p>
+            </div>
+        </article>
+        
+        <!-- Tracking and Optimization Services (Traque) -->
+        <article class="bg-gray-800 p-4 rounded-md flex justify-between items-center">
+            <div class="flex items-center">
+            <figure>
+                <img src="https://wow.zamimg.com/images/wow/icons/large/ability_tracking.jpg" alt="Icon representing Tracking and Optimization Services" class="rounded-circle mr-4">
+                <figcaption class="sr-only">Tracking and Optimization Services</figcaption>
+            </figure>
+            <div>
+                <h3 class="font-bold">Traque</h3>
+                <ul>
+                <li>Analyse de données: Optimisez vos performances grâce à une analyse approfondie de vos données (à partir de 300€ par mois)</li>
+                <li>SEO: Améliorez votre visibilité sur les moteurs de recherche (à partir de 100€ par mois)</li>
+                <li>SEA: Lancez des campagnes publicitaires ciblées et efficaces (à partir de 500€ par mois)</li>
+                <li>SMO: Développez votre présence sur les réseaux sociaux (à partir de 200€ par mois)</li>
+                </ul>
+            </div>
+            </div>
+            <div class="text-right">
+            <p class="font-bold">Quantité</p>
+            <p>Prix</p>
+            </div>
+        </article>
+        
+        <!-- Legal Services (LEO) -->
+        <article class="bg-gray-800 p-4 rounded-md flex justify-between items-center">
+            <div class="flex items-center">
+            <figure>
+                <img src="../images/Leo.png" alt="Icon representing Leo Legal Services" class="rounded-lg mr-4">
+                <figcaption class="sr-only">Legal Services</figcaption>
+            </figure>
+            <div>
+                <h3 class="font-bold">LEO</h3>
+                <ul>
+                <li>Rédaction de contenus juridiques: Conditions générales de vente, mentions légales... (à partir de 100€ par page)</li>
+                <li>Conseils juridiques: Bénéficiez de l'expertise d'un avocat pour sécuriser votre activité (à partir de 200€ par heure)</li>
+                <li>Dépôt de marques: Protégez votre identité et vos droits (à partir de 500€)</li>
+                <li>Formation en droit: Renforcez vos connaissances juridiques (à partir de 300€ par jour)</li>
+                </ul>
+            </div>
+            </div>
+            <div class="text-right">
+            <p class="font-bold">Quantité</p>
+            <p>Prix</p>
+            </div>
+        </article>
+        
+        <!-- Home Delivery Services -->
+        <article class="bg-gray-800 p-4 rounded-md flex justify-between items-center">
+            <div class="flex items-center">
+            <figure>
+                <img src="https://placehold.co/50x50" alt="Icon representing Home Delivery Services" class="rounded-full mr-4">
+                <figcaption class="sr-only">Home Delivery Services</figcaption>
+            </figure>
+            <div>
+                <h3 class="font-bold">Livraison à {domicile/gps}</h3>
+                <ul>
+                <li>Bénéficiez de la livraison de nos produits directement chez vous</li>
+                <li>Disponibilité: Du lundi au vendredi, de 9h à 18h</li>
+                <li>Coût: 10€ par livraison</li>
+                </ul>
+            </div>
+            </div>
+            <div class="text-right">
+            <p class="font-bold">Disponibilité</p>
+            <p>Coût</p>
+            </div>
+        </article>
+</section>
+
+
+
+
+
         </div>
+    </body>
         <style>
             /* Enhancements for Linxo-like style */
             :root {
@@ -273,39 +415,51 @@
     >list
     >change
 -->
-<div id="actionBarsContainer" class="ui-element action-bars-container">
-    <h2>Masse; Réserve; /L | /Kg /$</h2>
+<div style="background-color: #00ff98;" id="actionBarsContainer" class="ui-element action-bars-container">
+    Share...<h2>Réserve {Mass+Energy} = [ /L | /Kg | /$ ]</h2>
+<%- include('../includes/brands_social.ejs') %> |  <i class="fab fa-uber"> Uber </i>
 
-    <div id="Grande" title="Grange">
-    <!-- Profil + Réserve-->
-                            <div class="icon-bar flex items-center justify-between p-5">
-                            <div id="" class="ui-user" title="➡️ #User #Client #EXP OnHover">Quêtes & Stuff & Utilisateur
-                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_39.jpg" alt="Lame-tonnerre" class="mx-2">
-                            <img src="chemin/vers/Ashbringer.png" alt="Ashbringer" class="mx-2">
-                            <img src="chemin/vers/Couronne-de-glace.png" alt="Couronne de glace" class="mx-2">
-                            <img src="chemin/vers/Yasuo.png" alt="Yasuo" class="mx-2">
-                            <img src="chemin/vers/Zed.png" alt="Zed" class="mx-2">
-                            <img src="chemin/vers/Ahri.png" alt="Ahri" class="mx-2"> -->
-                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_gizmo_02.jpg" alt="Ingénieur" class="mx-2">
-                            </div>	
-                            </div>
+                <div id="Grande" title="Grange">
+                    <!-- Profil + Réserve -->
+                    <div class="icon-bar flex items-center justify-between p-5">
+                        <div id="" class="ui-user" title="➡️ #User #Client #EXP OnHover">Liste de Quêtes | Livraisons | 🧑Profil</div>
+                    </div>
 
-                            <style>
-                            .bag-img {
-                            border-radius: 10px; /* ajustez la valeur selon votre préférence pour le degré d'arrondi */
-                            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* ajustez les valeurs pour l'ombre portée selon vos besoins */
-                            }
-                            .rounded-circle {
-                            border-radius: 33.333%;
-                            }
-                            </style>
-                            <img src="https://wow.zamimg.com/images/wow/icons/large/ui_sigil_kyrian.jpg" alt="Foyer" class="mx-2 rounded-circle">
-                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_13.jpg" alt="Bag5" class="mx-2 bag-img">     
-                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_13.jpg" alt="Bag4" class="mx-2 bag-img">
-                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_13.jpg" alt="Bag3" class="mx-2 bag-img">
-                            <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_27.jpg" alt="Bag1" class="mx-2 bag-img">
+                    <!-- Icônes sur la même ligne -->
+                    <div class="icon-line flex items-center">
+                        <img src="https://wow.zamimg.com/images/wow/icons/medium/race_nightelf_female.jpg" alt="Personnage" class="icon mx-2 bag-img">
+                        
+                        <img src="https://wow.zamimg.com/images/wow/icons/tiny/quest-start.gif" alt="Quest Log" class="icon mx-2">
+                        <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_rune_07.jpg" title="TABLE" alt="ARChitect" class="icon mx-2 bag-img">
 
-    </div>
+                        <img src="https://wow.zamimg.com/images/wow/icons/large/inv_gizmo_02.jpg" alt="ING" class="icon mx-2 rounded-circle">
+                        <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_rune_01.jpg" title="comfort-area" class="icon mx-2 rounded-circle">
+                        <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_27.jpg" alt="Bag" class="icon mx-2 bag-img">
+                    </div>
+                </div>
+
+                <style>
+                .icon-line {
+                    display: flex; /* Utilisez flexbox pour aligner les éléments horizontalement */
+                    align-items: center; /* Centre les éléments verticalement dans leur conteneur */
+                    justify-content: center; /* Centre les éléments horizontalement dans leur conteneur */
+                    flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne suivante */
+                }
+
+                .bag-img, .rounded-circle {
+                    border-radius: 10px; /* Ajustez la valeur selon votre préférence pour le degré d'arrondi */
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ajustez les valeurs pour l'ombre portée selon vos besoins */
+                }
+
+                .rounded-circle {
+                    border-radius: 33.333%;
+                }
+
+                .icon {
+                    margin: 0 10px; /* Espacement horizontal entre les icônes */
+                }
+                </style>
+
 
 <!--<AddOn> actionBarsContainer-->
 </div>

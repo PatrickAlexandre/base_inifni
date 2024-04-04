@@ -14,14 +14,10 @@ const initialize = () => {
     'CREATE TABLE IF NOT EXISTS ShipmentAddresses (id TEXT PRIMARY KEY, userId TEXT, address TEXT)',
     'CREATE TABLE IF NOT EXISTS Products (id TEXT PRIMARY KEY, title TEXT, price REAL, description TEXT, imageUrl TEXT, imageKey TEXT, details LONGTEXT)',
     'CREATE TABLE IF NOT EXISTS Orders (id TEXT PRIMARY KEY, userId TEXT, email TEXT, date TEXT, products TEXT)',
-    // CUSTOMER table
+    // NEW tables
     'CREATE TABLE IF NOT EXISTS Client (id TEXT PRIMARY KEY, userId TEXT, productId TEXT, rating INTEGER, review TEXT)',
-    // FEEDBACK table
     'CREATE TABLE IF NOT EXISTS Avis (id TEXT PRIMARY KEY, userId TEXT, productId TEXT, rating INTEGER, review TEXT)',
-    // Outils table
     'CREATE TABLE IF NOT EXISTS Tools (id TEXT PRIMARY KEY, userId TEXT, productId TEXT, rating INTEGER, review TEXT)',   
-    // Prompt table
-    'CREATE TABLE IF NOT EXISTS Prompt (id TEXT PRIMARY KEY, userId TEXT, productId TEXT, rating INTEGER, review TEXT)',      
   ];
 
   createTableQueries.forEach((query) => {

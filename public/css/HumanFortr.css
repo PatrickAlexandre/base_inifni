@@ -95,8 +95,9 @@ body, html {
 
 
 #Quest_Log {
-    background-color: #ff7c0a; /* Drood Color for Universe */
-                /* background-color: #0074D9;  Dark blue for Retention */
+                /* background-color: #dfc8b5;   Beige */
+                /* background-color: #ff7c0a;   Drood Color for Universe */
+                background-color: #0074D9;/*   Dark blue for Retention */
     flex: 1 1 215px;
 }
 
@@ -141,8 +142,40 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
 }
-
 .action-bars-menu:focus {
     outline: none;
     border-color: #FFD700;
+}
+
+
+.pistage-menu {
+    padding: 10px; /* Ajusté pour un contenu plus centré dans le cercle */
+    width: 40px; /* Largeur fixe pour la forme circulaire */
+    height: 40px; /* Hauteur égale à la largeur pour un cercle parfait */
+    line-height: 20px; /* Ajustement de la ligne pour le texte à l'intérieur du cercle */
+    margin-left: 20px; /* Conserve une marge à gauche */
+    background-image: url('https://wow.zamimg.com/images/classes/symbols/icon-hunter.png');
+    background-size: cover; /* Ajuste la taille de l'image pour remplir le cercle */
+    color: #FFF; /* Texte en blanc pour contraste */
+    border: 2px solid #555; /* Bordure sombre pour définir clairement le cercle */
+    border-radius: 50%; /* Rayon de bordure à 50% pour un cercle parfait */
+    cursor: pointer; /* Indique que l'élément est cliquable */
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    text-align: center; /* Assure que le texte est centré */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de profondeur */
+    text-shadow: 1px 1px 2px black; /* Ombre de texte pour une meilleure lisibilité */
+    font-weight: bold; /* Rend le texte en gras */
+    transition: all 0.3s ease; /* Transition douce pour les interactions */
+}
+
+
+.pistage-menu:hover {
+    background-color: #f22f2f; /* Couleur plus claire au survol */
+    transform: scale(1.1); /* Légère augmentation de taille pour indiquer la sélection */
+}
+
+.pistage-menu:active {
+    transform: scale(0.9); /* Effet de pression lors du clic */
 }
