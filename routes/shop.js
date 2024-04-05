@@ -6,7 +6,6 @@ const shopRouter = express.Router();
 
 shopRouter.get('/', shopController.getHomepage);
 shopRouter.get('/about', shopController.getAbout);
-shopRouter.get('/services', shopController.getTest);
 shopRouter.get('/contact', shopController.getContact);
 shopRouter.get('/products', shopController.getProducts);
 shopRouter.get('/mypage', isAuthenticated, shopController.getMyPage);

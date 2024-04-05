@@ -14,10 +14,6 @@ const initialize = () => {
     'CREATE TABLE IF NOT EXISTS ShipmentAddresses (id TEXT PRIMARY KEY, userId TEXT, address TEXT)',
     'CREATE TABLE IF NOT EXISTS Products (id TEXT PRIMARY KEY, title TEXT, price REAL, description TEXT, imageUrl TEXT, imageKey TEXT, details LONGTEXT)',
     'CREATE TABLE IF NOT EXISTS Orders (id TEXT PRIMARY KEY, userId TEXT, email TEXT, date TEXT, products TEXT)',
-    // NEW tables
-    'CREATE TABLE IF NOT EXISTS Client (id TEXT PRIMARY KEY, userId TEXT, productId TEXT, rating INTEGER, review TEXT)',
-    'CREATE TABLE IF NOT EXISTS Avis (id TEXT PRIMARY KEY, userId TEXT, productId TEXT, rating INTEGER, review TEXT)',
-    'CREATE TABLE IF NOT EXISTS Tools (id TEXT PRIMARY KEY, userId TEXT, productId TEXT, rating INTEGER, review TEXT)',   
   ];
 
   createTableQueries.forEach((query) => {
@@ -341,44 +337,6 @@ const addOrUpdateAddress = (shipmentAddress) => {
     return savedAddress.id ? updateAddress(shipmentAddress) : createAddress(shipmentAddress);
   });
 }
-
-const addReview = (review) => {
-  return new Promise((resolve, reject) => {
-    try {
-      // Générer un identifiant unique pour le nouvel avis
-      const reviewId = uuidV4.uuid();
-      const { userId, productId, rating, reviewText } = review;
-
-      // Préparer la commande SQL pour insérer le nouvel avis
-      const stmt = db.prepare('INSERT INTO Avis (id, userId, productId, rating, review) VALUES (?, ?, ?, ?, ?)');
-
-      // Exécuter la commande avec les données fournies
-      stmt.run(reviewId, userId, productId, rating, reviewText);
-
-      // Résoudre la promesse si tout se passe bien
-      resolve(true);
-    } catch (err) {
-      console.log('Failed to add new review', err);
-
-      // Rejeter la promesse en cas d'erreur
-      reject(err);
-    }
-  });
-};
-initialize().then(() => {
-  const newReview = {
-    userId: 'some-user-id',
-    productId: 'some-producft-id',
-    rating: 4,
-    reviewText: 'Excellent produit, je le recommffande vivement !'
-  };
-
-  addReview(newReview)
-    .then(() => console.log('Review added successfully'))
-    .catch(err => console.error('Failed to add review', err));
-});
-
-
 
 module.exports = {
   initialize,
