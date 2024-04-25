@@ -1,14 +1,59 @@
-       <div class="w3-card w3-round w3-white">
-        <div class="w3-container">
-         <h4 id="current-age" class="w3-center"></h4>
-         <div id="nights-lived" class="w3-center" title="Moons"></div>
-         <p class="w3-center"><img src="https://64.media.tumblr.com/06be4be00ddb1f20e627b8f8b41caeb9/tumblr_o68u0vgd0p1qkpz2go1_r1_400.gif" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
-         <div id="esperanceHP" class="progress-container" title="❤️ Health">
-          <div class="progress-bar"></div>
-         </div><br>
-         <hr>
-         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
-         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
-         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
+<!-- The Grid -->
+<div class="w3-row" style="max-width:100%;">
+
+
+    <!-- Column -->
+    <div class="w3-col">
+
+        <div class="w3-card w3-padding-16 w3-center w3-margin-bottom">
+
+            <!-- Conteneur Flex pour aligner l'image et le contenu -->
+            <div style="display: flex;">
+
+                <img src="https://64.media.tumblr.com/06be4be00ddb1f20e627b8f8b41caeb9/tumblr_o68u0vgd0p1qkpz2go1_r1_400.gif" class="w3-circle profil-shadow" style="height:106px;width:106px" alt="Avatar">
+                    <!-- Conteneur pour le contenu textuel à aligner avec l'image -->
+                <div title="USERNAME + lvl + progressbar"> <!-- Ajoutez une marge à gauche pour espacer l'image du texte -->
+
+                    <div class="UserNameProfil">
+                        <div id="current-age" class="w3-center"></div>
+                    </div>
+                    <div class="flex-progress">
+                        <div id="esperanceHP" class="progress-container" title="❤️ Health"><div class="progress-bar"></div></div>
+
+
+                        <div id="birthDateProgress" class="progress-container" title="Progression des calories">
+                            <div class="progress-bar bg-warrior" style="width: 100%;" title="Base-Metabolism: Chargement en cours...">
+                                Fatigue... 900 / 3100 kcal
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-      </div>
+
+        
+    </div>
+
+
+
+<script src="/js/NIGHT.js"></script>
+</div>
+
+
+
+<!-- Birth Date Input + Gender Selection-->
+<div class="w3-card w3-round w3-theme-l4 w3-center w3-padding w3-margin">
+    <label for="BirthDate" class="w3-text-grey">Birth Date</label>
+    <input type="date" id="BirthDate" class="w3-input w3-border w3-round" onchange="calculerAgeEtNuitsEcoulées()">
+    <label for="gender" class="w3-text-grey">Chromosome @23rd pair</label>
+    <select id="gender" class="w3-select w3-border w3-round" onchange="calculerAgeEtNuitsEcoulées()">
+        <option value="male" title="male">XY</option>
+        <option value="female" title="female">XX</option>
+    </select>        
+</div>
+
+
+

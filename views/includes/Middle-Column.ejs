@@ -1,56 +1,192 @@
-     <div class="w3-hide-small w3-col m7">
+<div class="w3-col m7">
 
-      <div class="w3-row-padding">
+    <!-- Social Media Status Update Card -->
+    <div class="w3-hide-small w3-row-padding">
         <div class="w3-col m12">
-          <div class="w3-card w3-round w3-white">
-            <div class="w3-container w3-padding">
-              <h6 class="w3-opacity">Social Media template by w3.css</h6>
-              <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container w3-padding">
+                    <h6 class="w3-opacity">Gaming UI</h6>
+                    <p contenteditable="true" class="w3-border w3-padding">Prompt: Feeling Blue</p>
+                    <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i> Send Message to AI</button>
+                    <%- include('../includes/OptiEmotion.ejs') %>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    </div>
+
+   
+
+
+    <!-- User Post Cards -->
+    <div class="w3-hide-medium w3-hide-small w3-container w3-card w3-white w3-round w3-margin"><br>
         <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">1 min</span>
         <h4>John Doe</h4><br>
         <hr class="w3-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="w3-row-padding" style="margin:0 -16px">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="w3-row-padding" style="margin:0 -16px">
             <div class="w3-half">
-              <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+                <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
             </div>
             <div class="w3-half">
-              <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
-          </div>
+                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
+            </div>
         </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div>
-      
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">16 min</span>
-        <h4>Jane Doe</h4><br>
-        <hr class="w3-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">32 min</span>
-        <h4>Angie Jane</h4><br>
-        <hr class="w3-clear">
-        <p>Have you seen this?</p>
-        <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div> 
-      
-    <!-- End Middle Column -->
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> Comment</button> 
     </div>
+
+    <!-- Other user posts and article cards are similar to the above structure -->
+    <!-- Repeat for each user post and article card as needed -->
+
+    <!-- Articles for Various Professions -->
+    <div class="w3-hide w3-container w3-card w3-white w3-round w3-margin">
+        
+        <!-- COPYWRITER Article -->
+        <article class="w3-card w3-round w3-white w3-center">
+
+            <h3>COPYWRITER</h3>
+            <p>Compétences : <span id="competences-copywriter"></span></p>
+            <p>Positionnement : <span id="position-copywriter"></span></p>
+            <div>
+              <p><img src="../images/COPYWRITER.png" alt="Copywriter at work" class="image-article"> Revenu Mensuel Espéré : <span id="revenue-copywriter"></span></p>
+            </div>
+        </article>
+
+        <!-- SandBox Article -->
+        <article class="w3-card w3-round w3-white">
+            <div>
+            <img src="../images/COPYWRITER.png" alt="Copywriter at work" class="image-article">
+            COPYWRITER
+            Compétences : <span id="competences-copywriter"></span><br>
+            Positionnement : <span id="position-copywriter"></span>
+            </div>
+            <p>Revenu Mensuel Espéré : <span id="revenue-copywriter"></span></p>
+        </article>
+
+        <!-- COMMUNITY MANAGER Article -->
+        <article class="w3-card w3-round w3-white w3-center">
+            <h3>COMMUNITY MANAGER</h3>
+            <p>Compétences : <span id="competences-community-manager"></span></p>
+            <p>Positionnement : Gestion des réseaux sociaux, création de contenu engageant, gestion de communauté</p>
+            <div>
+                <img src="../images/COMMUNITY_MANAGER.png" alt="Community Manager at work" class="image-article">
+                <p>Revenu mensuel espéré : 800 € à 3 000 €</p>
+            </div>
+        </article>
+        
+        <!-- DEVELOPPEUR WEB Article -->
+        <article class="w3-card w3-round w3-white w3-center">
+            <h3>DEVELOPPEUR WEB</h3>
+            <p>Compétences : <span id="competences-developpeur-web"></span></p>
+            <p>Positionnement : Développement et maintenance de sites web, maîtrise des langages de programmation</p>
+            <div>
+                <img src="../images/DEVELOPPEUR_WEB.png" alt="Web Developer at work" class="image-article">
+                <p>Revenu mensuel espéré : 1 500 € à 6 000 €</p>
+            </div>
+        </article>
+        
+        <!-- MONTEUR VIDEO Article -->
+        <article class="w3-card w3-round w3-white w3-center">
+            <h3>MONTEUR VIDEO</h3>
+            <p>Compétences : <span id="competences-monteur-video"></span></p>
+            <p>Positionnement : Création et édition de vidéos pour diverses plateformes</p>
+            <div>
+                <img src="../images/MONTEUR_VIDEO.png" alt="Video Editor at work" class="image-article">
+                <p>Revenu mensuel espéré : 1 200 € à 4 000 €</p>
+            </div>
+        </article>
+        
+        <!-- GRAPHISTE Article -->
+        <article class="w3-card w3-round w3-white w3-center">
+            <h3>GRAPHISTE</h3>
+            <p>Compétences : <span id="competences-graphiste"></span></p>
+            <p>Positionnement : Conception visuelle et graphique, création d'identités visuelles</p>
+            <div>
+                <img src="../images/GRAPHISTE.png" alt="Graphic Designer at work" class="image-article">
+                <p>Revenu mensuel espéré : 1 000 € à 5 000 €</p>
+            </div>
+        </article>
+        
+        <!-- CLOSER Article -->
+        <article class="w3-card w3-round w3-white w3-center">
+            <h3>CLOSER</h3>
+            <p>Compétences : <span id="competences-closer"></span></p>
+            <p>Positionnement : Vente et négociation, spécialisation dans la clôture de ventes</p>
+            <div>
+                <img src="../images/CLOSER.png" alt="Sales Closer at work" class="image-article">
+                <p>Revenu mensuel espéré : 2 000 € à 7 000 €</p>
+            </div>
+        </article>
+        
+        <!-- MEDIA BUYER Article -->
+        <article class="w3-card w3-round w3-white w3-center">
+            <h3>MEDIA BUYER</h3>
+            <p>Compétences : <span id="competences-media-buyer"></span></p>
+            <p>Positionnement : Achat d'espaces publicitaires, stratégie et optimisation de campagnes publicitaires</p>
+            <div>
+                <p>Revenu mensuel espéré : 1 500 € à 6 000 €</p>
+                <img src="../images/MEDIA_BUYER.png" alt="Media Buyer at work" class="image-article">
+            </div>
+        </article>
+        <script>
+            // Data for COPYWRITER profession
+            const dataCopywriter = {
+                competences: ["excellente maîtrise de la langue", "storytelling", "écriture persuasive"],
+                position: "spécialisation dans des niches lucratives (ex : santé, finance), rédaction de pages de vente",
+                revenu: "1 000 € à 5 000 € par mois"
+            };
+
+            function insertProfessionDetails() {
+                // Insert competencies
+                document.getElementById('competences-copywriter').innerText = dataCopywriter.competences.join(', ');
+                // Insert positioning
+                document.getElementById('position-copywriter').innerText = dataCopywriter.position;
+                // Insert expected monthly revenue
+                document.getElementById('revenue-copywriter').innerText = dataCopywriter.revenu;
+            }
+
+            // Call the function to insert details into the HTML
+            document.addEventListener('DOMContentLoaded', insertProfessionDetails);
+        </script>
+
+        
+    </div>
+    <!-- Articles for Various Professions -->
+
+    <!-- [User Post TEMPLATE] -->
+    <div class="w3-hide-medium w3-hide-small w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">1 min</span>
+        <h4>John Doe</h4><br>
+        <hr class="w3-clear">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="w3-row-padding" style="margin:0 -16px">
+            <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
+            </div>
+        </div>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> Comment</button> 
+    </div>
+
+
+</div>
+
+<script>
+    // Competencies and Expected Salaries Data
+    const COMPETENCES_COPYWRITER = ["excellente maîtrise de la langue de travail", "storytelling", "écriture persuasive"];
+    // Repeat for each profession as needed
+
+    // Function to insert competencies into HTML
+    function insertCompetencies() {
+        document.getElementById('competences-copywriter').innerText = COMPETENCES_COPYWRITER.join(', ');
+        // Repeat for each profession as needed
+    }
+
+    // Call the function after the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', insertCompetencies);
+</script>

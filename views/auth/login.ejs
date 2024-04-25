@@ -6,8 +6,13 @@
   }
 </script>
 <body>
-  <%- include('../includes/navigation.ejs') %>
+  <!-- Profile -->
+  <%- include('../includes/navigation.ejs') %>  
+
   <div class="uk-section uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport>
+
+  
+
     <div class="uk-container">
       <% if (errorMessage) { %>
         <div class="uk-alert-danger" uk-alert>
@@ -31,7 +36,7 @@
               </div>
             </div>
             <div class="uk-margin uk-text-center">
-              <button class="g-recaptcha uk-button uk-button-primary uk-text-capitalize" type="submit" data-sitekey="<%= recaptchaSiteKey %>" data-callback="onSubmit" data-action="submit">Login</button>
+              <button class="uk-button uk-button-primary uk-text-capitalize" type="submit"  data-callback="onSubmit" data-action="submit">Login</button>
             </div>
           </form>
         </div>

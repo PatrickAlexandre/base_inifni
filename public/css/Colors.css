@@ -1,0 +1,80 @@
+ :root {
+  --warrior-color: #C79C6E;       /* Guerrier */
+  --paladin-color: #F58CBA;       /* Paladin */
+  --hunter-color: #ABD473;        /* Chasseur */
+  --rogue-color: #FFF569;         /* Voleur */
+  --priest-color: #FFFFFF;        /* Prêtre */
+  --death-knight-color: #C41F3B;  /* Chevalier de la mort */
+  --shaman-color: #0070DE;        /* Chaman */
+  --mage-color: #69CCF0;          /* Mage */
+  --warlock-color: #9482C9;       /* Démoniste */
+  --monk-color: #00FF96;          /* Moine */
+  --druid-color: #FF7D0A;         /* Druide */
+  --demon-hunter-color: #A330C9;  /* Chasseur de démons */
+  --evoker-color: #400080;        /* Invocateur */
+
+    --intj-color: #4B4B4B; /* Architecte */
+    --intp-color: #5C8D89; /* Logicien */
+    --entj-color: #B33B24; /* Commandant */
+    --entp-color: #FAA61A; /* Innovateur */
+    
+    --infj-color: #276678; /* Avocat */
+    --infp-color: #9C89B8; /* Médiateur */
+    --enfj-color: #E1C16E; /* Protagoniste */
+    --enfp-color: #F4D35E; /* Inspirateur */
+    
+    --istj-color: #0F5257; /* Logisticien */
+    --isfj-color: #0B3142; /* Protecteur */
+    --estj-color: #E63E11; /* Directeur */
+    --esfj-color: #F5D0C5; /* Consul */
+    
+    --istp-color: #7A306C; /* Virtuose */
+    --isfp-color: #2BAE66; /* Aventurier */
+    --estp-color: #E73F74; /* Entrepreneur */
+    --esfp-color: #EDAE49; /* Amuseur */
+  
+}
+
+
+
+.c-warrior { color: var(--warrior-color) !important; }
+.c-paladin { color: var(--paladin-color) !important; }
+.c-hunter { color: var(--hunter-color) !important; }
+.c-rogue { color: var(--rogue-color) !important; }
+.c-priest { color: var(--priest-color) !important; }
+.c-death-knight { color: var(--death-knight-color) !important; }
+.c-shaman { color: var(--shaman-color) !important; }
+.c-mage { color: var(--mage-color) !important; }
+.c-warlock { color: var(--warlock-color) !important; }
+.c-monk { color: var(--monk-color) !important; }
+.c-druid { color: var(--druid-color) !important; }
+.c-demon-hunter { color: var(--demon-hunter-color) !important; }
+.c-evoker { color: var(--evoker-color) !important; }
+.c-1 { color: var(--warrior-color) !important; }
+.c-2 { color: var(--paladin-color) !important; }
+.c-3 { color: var(--hunter-color) !important; }
+.c-4 { color: var(--rogue-color) !important; }
+.c-5 { color: var(--priest-color) !important; }
+.c-6 { color: var(--death-knight-color) !important; }
+.c-7 { color: var(--shaman-color) !important; }
+.c-8 { color: var(--mage-color) !important; }
+.c-9 { color: var(--warlock-color) !important; }
+.c-10 { color: var(--monk-color) !important; }
+.c-11 { color: var(--druid-color) !important; }
+.c-12 { color: var(--demon-hunter-color) !important; }
+.c-13 { color: var(--evoker-color) !important; }
+
+/* Classes pour la couleur d'arrière-plan */
+.bg-warrior { background-color: var(--warrior-color) !important; }
+.bg-paladin { background-color: var(--paladin-color) !important; }
+.bg-hunter { background-color: var(--hunter-color) !important; }
+.bg-rogue { background-color: var(--rogue-color) !important; }
+.bg-priest { background-color: var(--priest-color) !important; }
+.bg-death-knight { background-color: var(--death-knight-color) !important; }
+.bg-shaman { background-color: var(--shaman-color) !important; }
+.bg-mage { background-color: var(--mage-color) !important; }
+.bg-warlock { background-color: var(--warlock-color) !important; }
+.bg-monk { background-color: var(--monk-color) !important; }
+.bg-druid { background-color: var(--druid-color) !important; }
+.bg-demon-hunter { background-color: var(--demon-hunter-color) !important; }
+.bg-evoker { background-color: var(--evoker-color) !important; }

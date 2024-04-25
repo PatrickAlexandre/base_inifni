@@ -1,0 +1,26 @@
+  .purchase-factor-bar {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .purchase-factor-slot {
+    background-color: #efefef;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .purchase-factor {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border-radius: 4px;
+    background-image: url('path-to-your-icon.png'); /* Chemin vers une icône représentant le facteur d'achat */
+  }

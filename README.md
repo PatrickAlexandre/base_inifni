@@ -1,15 +1,15 @@
 # 🏗️ Welcome to Your New Template Experience!
 ## Where to find everything?
 
-## 🧱 Squelette Batiment
+## 🧱 Squelette, Bâtiment
 - **Composants Réutilisables :** 
   - Le dossier `views/includes/` est spécialement conçu pour les petits composants réutilisables, comme l'en-tête de page. Utilisez-le pour uniformiser les éléments qui apparaissent sur plusieurs pages.
   - `views/includes/head.ejs` : Placez ici les métadonnées nécessaires sur chaque page pour assurer une cohérence à travers le projet.
 
-## 🎨 Habillage FORME
+## 🎨 Habillage
   - `public/css/` : Contient les fichiers de style. C'est ici que vous personnalisez l'apparence de votre projet.
 
-## Systeme electrique Approfondissez avec les composants et les technologies | Logique | Calcul
+## Logique | Approfondissez avec les composants et les technologies | Calcul
   - `public/js/` : Regroupe la logique frontend. Modifiez ces fichiers pour changer le comportement interactif de vos pages.
   - `database/sqlite.js` : Toute la logique liée à la base de données SQLite est ici, y compris la création de la base de données et les requêtes.
 

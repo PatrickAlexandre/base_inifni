@@ -1,0 +1,231 @@
+ <%- include('../includes/HEAD.ejs') %>
+    </style>
+    <link rel="stylesheet" href="../css/MyProfile.css">
+  </head>
+<body class="w3-theme-d1">
+
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <%- include('../auth/PROFIL.ejs') %>
+      <br>
+        <div class="w3-card w3-round w3-white w3-padding-large w3-margin-bottom">
+          <%- include('../includes/POSTSignup.ejs') %>
+        </div>
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button onclick="alert('ID=LOGIC')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> Vision Score</button>
+          <div id="Demo1" class="w3-hide w3-container">
+            <p>Some text..</p>
+          </div>
+          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Raids</button>
+          <div id="Demo2" class="w3-hide w3-container">
+            <p>EnableThirdEye.. Camera + Ux</p>
+          </div>
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> Guild</button>
+          <div id="Demo3" class="w3-hide w3-container">
+         <div class="w3-row-padding">
+         <br>
+           <div class="w3-half">
+             <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="https://www.w3schools.com/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="https://www.w3schools.com/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="https://www.w3schools.com/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+         </div>
+          </div>
+        </div>      
+      </div>
+      <br>
+      
+      <!-- Interests --> 
+      <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Interests</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-d5">News</span>
+            <span class="w3-tag w3-small w3-theme-d4">W3Schools</span>
+            <span class="w3-tag w3-small w3-theme-d3">Labels</span>
+            <span class="w3-tag w3-small w3-theme-d2">Games</span>
+            <span class="w3-tag w3-small w3-theme-d1">Friends</span>
+            <span class="w3-tag w3-small w3-theme">Games</span>
+            <span class="w3-tag w3-small w3-theme-l1">Friends</span>
+            <span class="w3-tag w3-small w3-theme-l2">Food</span>
+            <span class="w3-tag w3-small w3-theme-l3">Design</span>
+            <span class="w3-tag w3-small w3-theme-l4">Art</span>
+            <span class="w3-tag w3-small w3-theme-l5">Photos</span>
+          </p>
+        </div>
+      </div>
+      <br>
+      
+      <%- include('../auth/New-Player.ejs') %>
+
+
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p>People are looking at your profile. Find out who.</p>
+      </div>
+    
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+      <%- include('../includes/Middle-Column.ejs') %>
+
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p>
+          <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center w3-hide-large">
+        <div class="w3-container w3-hide-small">
+          <p><strong contenteditable="true">Position</strong></p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1614665800225!6m8!1m7!1sCAoSLEFGMVFpcE5Dak9fY3ROaUZkZ0F3R1MtTDNzMWZjQk5oV1l3d0N6UHBJN0J3!2m2!1d38.787587279589205!2d-9.390556084601305!3f0!4f0!5f0.7820865974627469" class="w3-hide-small" width="100%" height="250" style="border-radius:100%;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="w3-container">
+          <p><a href="https://www.google.com/flights" target="_blank" class="w3-button w3-block w3-theme-l4">Flights</a></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+          <div class="w3-container">
+            <p><i class="fa fa-exclamation"></i> <strong>Quests</strong></p>
+            <p id="questTime"></p>
+            <hr>
+            <p><strong>Objectives</strong></p>
+            <p id="objectiveTime"></p>
+            <hr>
+            <p><strong>Achievements</strong></p>
+            <p id="achievementTime"></p>           
+          </div>
+      </div>
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          // Example data - in a real app, this would come from a server
+          const questJournal = {
+              quest: 'Explore the Dark Forest',
+              objectives: ['Find the Ancient Tree', 'Collect 3 Mystic Herbs', 'Defeat the Forest Guardian'],
+              achievements: ['Forest Explorer', 'Herbalist', 'Guardian Slayer'],
+              time: 'Friday 15:00'
+          };
+
+          // Update the DOM elements with the quest information
+          updateQuestJournal(questJournal);
+      });
+
+      function updateQuestJournal(journal) {
+          const questTime = document.getElementById('questTime');
+          const objectiveTime = document.getElementById('objectiveTime');
+          const achievementTime = document.getElementById('achievementTime');
+
+          questTime.textContent = `${journal.quest} - ${journal.time}`;
+          objectiveTime.textContent = `${journal.objectives.join(', ')} - ${journal.time}`;
+          achievementTime.textContent = `${journal.achievements.join(', ')} - ${journal.time}`;
+      }
+      </script>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Friend Request</p>
+          <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
+          <span>Jane Doe</span>
+          <div class="w3-row w3-opacity">
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <%- include('../includes/investigate.ejs') %>
+
+      <br>      
+      
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <p>ADS</p>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+        <p><i class="fa fa-bug w3-xxlarge"></i></p>
+      </div>
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Footer</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Made <a href="" target="_blank">_</a></p>
+</footer>
+ 
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+</script>
+
+
+    <script src="../js/NIGHT.js"></script>
+
+
+<%- include('../includes/end.ejs') %>
+

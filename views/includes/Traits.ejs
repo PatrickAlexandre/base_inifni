@@ -1,0 +1,80 @@
+<form>
+  <h3>Classe : </h3>
+<select id="wow-class" name="wow_class">
+  <option value="" disabled selected>Choisissez une classe</option>
+  <option value="warrior">Warrior</option>
+  <option value="paladin">Paladin</option>
+  <option value="mage">Mage</option>
+  <option value="hunter">Hunter</option>
+  <option value="priest">Priest</option>
+  <option value="warlock">Warlock</option>
+  <option value="rogue">Rogue</option>
+  <option value="druid">Druid</option>
+  <option value="monk">Monk</option>
+  <option value="death-knight">Death Knight</option>
+  <option value="shaman">Chaman</option>
+  <option value="demon-hunter">Chasseur de démons</option>
+  <option value="evoker">Invocateur</option>
+</select>
+
+
+  <h3>MBTI : (Optionnel)</h3>
+  <select id="mbti-type" name="mbti_type">
+    <option value="" disabled selected>MBTI type</option>
+    <option value="intj">INTJ</option>
+    <option value="intp">INTP</option>
+    <option value="infj">INFJ</option>
+    <option value="infp">INFP</option>
+    <option value="entj">ENTJ</option>
+    <option value="entp">ENTP</option>
+    <option value="enfj">ENFJ</option>
+    <option value="enfp">ENFP</option>
+    <option value="istj">ISTJ</option>
+    <option value="isfj">ISFJ</option>
+    <option value="estj">ESTJ</option>
+    <option value="esfj">ESFJ</option>
+    <option value="istp">ISTP</option>
+    <option value="isfp">ISFP</option>
+    <option value="estp">ESTP</option>
+    <option value="esfp">ESFP</option>
+  </select>
+</form>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const body = document.body;
+  const wowClassSelector = document.getElementById('wow-class');
+  const mbtiTypeSelector = document.getElementById('mbti-type');
+
+  // Fonction pour changer la couleur de fond
+  function updateBackgroundColor() {
+    // Récupère la valeur de la classe WoW et du type MBTI
+    const wowClassValue = wowClassSelector.value;
+    const mbtiTypeValue = mbtiTypeSelector.value;
+    
+    // Prépare le nom de la variable CSS en fonction de la sélection
+    let colorVarName;
+    if (wowClassValue) {
+      colorVarName = `--${wowClassValue}-color`;
+    } else if (mbtiTypeValue) {
+      colorVarName = `--${mbtiTypeValue}-color`;
+    } else {
+      // Couleur par défaut si rien n'est sélectionné
+      body.style.backgroundColor = ''; // Ou mettre une couleur par défaut
+      return;
+    }
+
+    // Change la couleur de fond en utilisant la variable CSS correspondante
+    const color = getComputedStyle(document.documentElement).getPropertyValue(colorVarName);
+    body.style.backgroundColor = color;
+  }
+
+  // Écoute les changements sur les sélecteurs
+  wowClassSelector.addEventListener('change', updateBackgroundColor);
+  mbtiTypeSelector.addEventListener('change', updateBackgroundColor);
+});
+
+</script>
+

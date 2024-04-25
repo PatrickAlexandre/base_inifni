@@ -1,0 +1,53 @@
+<title>Dashboard Utilisateur</title>
+<!-- 
+Temps : Anneau
+Argent : Deux barres de progression verticales
+Santé : Trois Barres de progression horizontales (energie - fréquence - vibration)
+
+Crédit social :
+Respect des lois, fiabilité financière, comportement quotidien 
+-->
+
+<style>
+  body { font-family: Arial, sans-serif; }
+  .ring-time { width: 100px; height: 100px; border-radius: 50%; border: 5px solid #333; display: flex; align-items: center; justify-content: center; margin: 20px; }
+  .vertical-bar { width: 20px; height: 100px; background: lightgrey; margin: 10px; }
+  .vertical-fill { height: 100%; background: green; width: 100%; }
+  .horizontal-bar { width: 300px; height: 20px; background: lightgrey; margin: 10px 0; }
+  .horizontal-fill { height: 100%; background: blue; width: 0%; transition: width 2s; }
+  .category { margin-bottom: 20px; }
+</style>
+
+<body>
+
+    <div class="category">
+        <div class="ring-time">10:30</div>
+    </div>
+
+    <div class="category">
+        <div class="vertical-bar"><div class="vertical-fill" style="height: 50%;"></div></div>
+        <div class="vertical-bar"><div class="vertical-fill" style="height: 75%;"></div></div>
+    </div>
+
+    <div class="category">
+        <div class="horizontal-bar"><div class="horizontal-fill" style="width: 60%;"></div></div>
+        <div class="horizontal-bar"><div class="horizontal-fill" style="width: 80%;"></div></div>
+        <div class="horizontal-bar"><div class="horizontal-fill" style="width: 40%;"></div></div>
+    </div>
+
+    <div class="category">
+    <ul>
+        <li>Respect des lois: Élevé</li>
+        <li>Fiabilité financière: Moyenne</li>
+        <li>Comportement quotidien: Bon</li>
+    </ul>
+    </div>
+
+<script>
+// JavaScript pour dynamiser les barres au chargement
+document.querySelectorAll('.horizontal-fill').forEach(el => {
+    setTimeout(() => { el.style.width = el.parentElement.dataset.progress; }, 100);
+});
+</script>
+
+</body>

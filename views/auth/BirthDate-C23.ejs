@@ -1,0 +1,16 @@
+<div class="w3-card w3-round w3-theme-l4 w3-left-align w3-padding w3-margin"><!--Input + Selection = BirthDate + Gender-->
+
+    <label for="BirthDate" class="w3-text-grey">Birth Date</label>
+    <input type="date" id="BirthDate" class="w3-input w3-border w3-round" min="1903-01-02" onchange="calculerAgeEtNuitsEcoulées()">
+
+
+    <label for="gender" class="w3-text-grey">Gender</label>
+    <select id="gender" class="w3-select w3-border w3-round" onchange="calculerAgeEtNuitsEcoulées()" title="Select Your Character's Gender">
+        <!-- Chromosome; 23 pair -->
+        <option value="male" class="c-mage" title="male">XY</option>
+        <option value="female" class="bg-paladin" title="female">XX</option>
+    </select>
+
+    <i onclick="this.parentElement.style.display='none'" class="fa fa-remove w3-button w3-theme-l3"></i>
+
+</div>

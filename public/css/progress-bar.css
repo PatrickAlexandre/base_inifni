@@ -1,0 +1,39 @@
+/* Style général pour les conteneurs de barres de progression */
+.progress-container {
+width: 100%;
+border-radius: 8px;
+position: relative; /* Nécessaire pour le positionnement des barres de progression */
+transition: width 0.5s ease-in-out;
+
+}
+
+
+
+/* Styles spécifiques pour la barre de progression de l'espérance de vie */
+#esperanceHP .progress-bar {
+height: 20px;
+background-color: #47ce00; /* Pour indiquer l'espérance de vie */
+text-align: center;
+line-height: 20px;
+color: white;
+border-radius: 8px 8px 8px 8px;
+width: 100%; /* Initialisé à 100%, sera mis à jour dynamiquement par JS */
+transition: width 0.5s ease-in-out;
+white-space: nowrap;
+overflow: hidden; /* Cache tout contenu qui dépasse la largeur de la barre */
+}
+
+/* Styles spécifiques pour la barre de progression des calories */
+#caloriesKCAL .progress-bar {
+height: 20px;
+background-color:var(--warrior-color); /* Indique l'état des calories */
+text-align: center;
+line-height: 20px;
+color:var(--warrior-color);
+border-radius: 8px;
+width: 90%; /* Initialisé à 50%, sera mis à jour dynamiquement par JS */
+left: 0;
+transition: width 0.5s ease-in-out;
+white-space: nowrap;
+overflow: hidden; /* Cache le contenu débordant */
+}
