@@ -14,6 +14,7 @@ const initialize = () => {
     'CREATE TABLE IF NOT EXISTS ShipmentAddresses (id TEXT PRIMARY KEY, userId TEXT, address TEXT)',
     'CREATE TABLE IF NOT EXISTS Products (id TEXT PRIMARY KEY, title TEXT, price REAL, description TEXT, imageUrl TEXT, imageKey TEXT, details LONGTEXT)',
     'CREATE TABLE IF NOT EXISTS Orders (id TEXT PRIMARY KEY, userId TEXT, email TEXT, date TEXT, products TEXT)',
+      'CREATE TABLE IF NOT EXISTS CarteIdentite (id INTEGER PRIMARY KEY AUTOINCREMENT, numero_identite TEXT UNIQUE NOT NULL, nationalite TEXT NOT NULL, nom TEXT NOT NULL, prenom TEXT NOT NULL, sexe TEXT NOT NULL, date_naissance DATE NOT NULL, lieu_naissance TEXT NOT NULL, numero_identite_officiel TEXT NOT NULL UNIQUE)'
   ];
 
   createTableQueries.forEach((query) => {
@@ -285,6 +286,21 @@ const clearCart = (user) => {
     }
   });
 };
+
+const createCarteIdentite = (identityData) => {
+  return new Promise((resolve, reject) => {
+    try {
+      const { numero_identite, nationalite, nom, prenom, sexe, date_naissance, lieu_naissance, numero_identite_officiel } = identityData;
+      const stmt = db.prepare('INSERT INTO CarteIdentite (numero_identite, nationalite, nom, prenom, sexe, date_naissance, lieu_naissance, numero_identite_officiel) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
+      stmt.run(numero_identite, nationalite, nom, prenom, sexe, date_naissance, lieu_naissance, numero_identite_officiel);
+      resolve(true);
+    } catch (err) {
+      console.log('Failed to create identity card', err);
+      reject(err);
+    }
+  });
+};
+
 const createAddress = (shipmentAddress) => {
   return new Promise((resolve, reject) => {
     try {
@@ -359,6 +375,7 @@ module.exports = {
   getCart,
   removeFromCart,
   clearCart,
+  createCarteIdentite,
   getAddressByUserId,
   addOrUpdateAddress,
 };

@@ -1,6 +1,8 @@
 <%- include('../includes/head_INDEX.ejs') %>
 
 <body style="background-color: #607d8b;">
+
+
 <%- include('../includes/navigation.ejs') %>
 
   <!-- The Grid -->
@@ -11,9 +13,25 @@
 
     <!-- Left Column -->
     <div class="w3-col m3">
+      <% if (isAuthenticated) { %>
       <!-- Profile -->
-      <%- include('../includes/UserName.ejs') %>  
-      <%- include('../auth/BirthDate-C23.ejs') %>
+
+        <div class="bg-gray-800 w3-margin p-4 relative">
+          <%- include('../shop/CHARACTER.ejs') %>
+        </div>
+
+      <% } %>
+
+
+
+
+      <div class="character-bar w3-card w3-round w3-theme-l5 w3-padding-large w3-margin-bottom">
+        <%- include('../includes/UserName.ejs') %>
+      </div>
+
+      <div class="w3-card w3-round w3-theme-l4 w3-center w3-padding w3-margin">
+        <%- include('../auth/BirthDate-C23.ejs') %>
+      </div>
 
       <!-- Accordion -->
       <div class="w3-card w3-round">
@@ -136,9 +154,14 @@
 
       <div class="w3-card w3-round w3-theme-d1 w3-left-align w3-margin-bottom">
           <div class="w3-container">
-            
 
-
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1614665800225!6m8!1m7!1sCAoSLEFGMVFpcE5Dak9fY3ROaUZkZ0F3R1MtTDNzMWZjQk5oV1l3d0N6UHBJN0J3!2m2!1d38.787587279589205!2d-9.390556084601305!3f0!4f0!5f0.7820865974627469" 
+            class="w3-hide w3-circle" 
+            width="250" height="250" 
+            style="box-shadow: inset 0 0 10px #805e36, 0 0 10px #805e36;" 
+            allowfullscreen="" 
+            loading="lazy">
+            </iframe>
 
             <p><i class="fa fa-exclamation" aria-hidden="true"></i> <strong>QuestName</strong></p>
             <p id="questLog">Explore the Dark Forest - Friday 15:00</p>          
@@ -195,10 +218,7 @@
         <div>
           <div id="ageMessage">        </div>
 
-          <label for="weight">Poids (en kg):</label>
-          <input type="number" id="weight" name="weight" onchange="calculateMB()" step="0.1" value="70" min="30" max="300" class="w3-border">
-          <label for="height">Taille (en cm):</label>
-          <input type="number" id="height" name="height" onchange="calculateMB()" value="175" min="100" max="250" class="w3-border">
+
         </div>
       </div>
 
@@ -207,9 +227,6 @@
         <div class="progress-container" title="Progress towards BirthDate - MoneyBag goal">
           <div id="ManaMax" class="progress-bar progress-border bg-shaman" style="width: 99.97%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="0 / 100 Mana">99.97%</div>
         </div>
-        <!-- Improved the description for accessibility -->
-        <div class="level-info w3-center w3-text-grey">🌠 Chroniques des Âges Éternels</div>
-        <div id="nights-lived" class="w3-center" title="Number of moons since birth"></div> Jours sont passés
       </div>
 
 

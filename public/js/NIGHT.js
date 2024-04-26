@@ -46,13 +46,13 @@ function calculerAgeEtNuitsEcoulées() {
     //progression de l'espérance de vie !!!!
     var progressBar = document.querySelector("#esperanceHP .progress-bar");
     progressBar.style.width = lifePercentage + "%";
-    progressBar.innerText = lifePercentage.toFixed(0) + " %  " + age + " / " + maxLifeExpectancy.toFixed(0) + " hp";
+    progressBar.innerText = "(" + lifePercentage.toFixed(0) + "%) " + age + " / " + maxLifeExpectancy.toFixed(0);
 
     //âge actuel et le nombre de nuits écoulées
-    document.getElementById("current-age").innerText = "Lvl " + age;
+    document.getElementById("current-age").innerText = age;
     var oneDay = 24 * 60 * 60 * 1000; // heures * minutes * secondes * millisecondes
     var nightsLived = Math.floor((currentDate - birthDate) / oneDay);
-    document.getElementById("nights-lived").innerText = nightsLived;
+    document.getElementById("nights-lived").innerText = nightsLived + " Moons";
 
 
 

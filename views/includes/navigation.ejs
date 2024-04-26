@@ -33,11 +33,17 @@
         <li class="main-header__item">
           <a class="<%= path === '/mypage' ? 'active' : '' %>" href="/mypage">My Page</a>
         </li>
+        <li>
+          <a href="">
+            <i class="fa-solid fa-ranking-star"></i> Ranking
+          </a>
+        </li>
+
         <li class="main-header__item">
           <form action="/logout" method="post">
-            <a>
-              <button type="submit" class="logout">Logout</button>
-            </a>
+            <button type="submit" class="logout">
+              <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
           </form>
         </li>
         <li>
@@ -45,6 +51,7 @@
             <span class="uk-icon ui-icon" uk-tooltip="title: View cart items" uk-icon="icon: cart"></span>
           </a>
         </li>
+
       <% } %>
     </ul>
   </nav>
