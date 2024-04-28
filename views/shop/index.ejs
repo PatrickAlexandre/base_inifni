@@ -1,26 +1,25 @@
 <%- include('../includes/head_INDEX.ejs') %>
 
+
+  <%- include('../includes/navigation.ejs') %>
 <body style="background-color: #607d8b;">
 
 
-<%- include('../includes/navigation.ejs') %>
 
   <!-- The Grid -->
-  <div class="w3-row">
+  <div class="w3-row w3-margin-top">
 
 
 
 
     <!-- Left Column -->
     <div class="w3-col m3">
-      <% if (isAuthenticated) { %>
-      <!-- Profile -->
 
-        <div class="bg-gray-800 w3-margin p-4 relative">
-          <%- include('../shop/CHARACTER.ejs') %>
-        </div>
 
-      <% } %>
+        <!-- Profile -->
+        <%- include('../shop/CHARACTER.ejs') %>
+
+        
 
 
 
@@ -94,8 +93,6 @@
       </div>
       <br>
       
-
-
       <!-- Alert Box -->
       <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
         <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
@@ -104,9 +101,14 @@
         <p><strong>Hey!</strong></p>
         <p>People are looking at your profile. Find out who.</p>
       </div>
-    
+      <br>
+
+      <%- include('../includes/live_chat.ejs') %>
+
     <!-- End Left Column -->
     </div>
+
+
     
 
     <!-- Middle Column -->
@@ -163,11 +165,11 @@
             loading="lazy">
             </iframe>
 
-            <p><i class="fa fa-exclamation" aria-hidden="true"></i> <strong>QuestName</strong></p>
+            <p class="c-rogue"><i class="fa fa-exclamation" aria-hidden="true"></i> <strong>QuestName</strong></p>
             <p id="questLog">Explore the Dark Forest - Friday 15:00</p>          
           </div>
           <div class="w3-container">
-            <p><i class="fa fa-exclamation" aria-hidden="true"></i> <strong>QuestName</strong></p>
+            <p class="c-shaman"><i class="fa fa-exclamation" aria-hidden="true"></i> <strong>Daily Quest</strong></p>
             <p id="DailyQuest">Explore the Rain Forest - Sunday 15:00</p>          
           </div>
       </div>
@@ -238,7 +240,7 @@
         <p><i class="fa-solid fa-coins w3-xxlarge"></i></p>
         
         <!-- Section Revenus/Dépenses -->
-        <div class="income-expenses-section">
+        <div class="w3-hide income-expenses-section">
           <h2>Income | Expenses</h2>
             <!-- Lien pour télécharger le fichier -->
             <a href="https://wwws.linxo.com/secured/trends.page#Trends;chartType=SpendingPerCategoryPie;startDate=3/1/23;endDate=9/30/23;parentCategory=-1" class="w3-button" download>Download .csv file</a>
@@ -257,9 +259,14 @@
         </div>
       </div>
 
-
-      <%- include('../includes/investigate.ejs') %>
-
+       <div class="w3-card w3-round w3-white w3-center w3-margin w3-padding-16">
+        <div class="w3-container w3-padding">
+          <h5 title="Outillage OSINT pour mettre à jour tous les profils de réseaux sociaux">Uncover What You're Missing <i class="fa-solid fa-user-secret"></i> One Click to Reveal Hidden Profiles</h5>
+          <p class="w3-hide">Sniffe les liens avec notre</p>
+          <p class="w3-opacity"> fonction de recherche inversée par e-mail ou téléphone.</p>
+          <%- include('../includes/feature/investigate.ejs') %>
+        </div>
+      </div>
 
     <!-- End Right Column -->
     </div>

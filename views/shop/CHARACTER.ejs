@@ -1,19 +1,66 @@
-<head>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
 
-  <!-- Avatar and health/energy bars -->
-    <div class="flex flex-col items-center">
-      <!-- Avatar -->
-      <img class="w-16 h-16 rounded-full border-2 border-yellow-300" src="https://64.media.tumblr.com/06be4be00ddb1f20e627b8f8b41caeb9/tumblr_o68u0vgd0p1qkpz2go1_r1_400.gif" alt="Character Avatar">
-      <!-- Health bar -->
-      <div class="w-16 bg-red-700 rounded mt-2">
-        <div class="bg-red-500 text-xs leading-none py-1 text-center text-white" style="width: 70%;">70%</div>
-      </div>
-      <!-- Energy bar -->
-      <div class="w-16 bg-blue-700 rounded mt-1">
-        <div class="bg-blue-500 text-xs leading-none py-1 text-center text-white" style="width: 80%;">80%</div>
-      </div>
+
+  <style>
+  /* Styles personnalisés pour l'insigne de niveau */
+  .level-badge {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4B5563; /* Fond gris */
+    color: white;
+    padding: 2px 6px;
+    border-radius: 0.375rem; /* rounded-md */
+    font-size: 0.75rem; /* text-xs */
+  }
+  </style>
+
+<!-- Tailwind OFF sur Mobile Device = Use -> [W3C Class & CSS] ONLY -->
+
+<div class="w3-card w3-round p-4 w3-margin">
+  <div class="flex items-end" >
+    <!-- Avatar à gauche -->
+    <div class="relative mr-2">
+      <img class="w-16 h-16 w3-circle border-2 border-yellow-300" src="https://i.gifer.com/6Dg.gif" alt="AI Avatar">
+      <div class="level-badge">0</div>
     </div>
+
+    <!-- Nom et barres de santé/mana -->
+    <div class="flex flex-col">
+
+      <!-- Nom du personnage -->
+      <h1 class="text-white text-lg mb-1">Bienvenue, <%= firstname %>!</h1>
+
+
+      <!-- Barre de santé -->
+      <div class="w-32 bg-green-700 rounded" title="❤️ Remaining Life">
+        <div class="bg-green-500 text-xs leading-none py-1 text-center text-white" style="width: 100%;">(100%) 0 / 79</div>
+      </div>
+      <!-- Barre de mana -->
+      <div class="w-32 bg-blue-700 rounded mt-1" title="🧠 Mental Load">
+        <div class="bg-blue-500 text-xs leading-none py-1 text-center text-white" style="width: 25%;">25%</div>
+      </div>
+
+
+    </div>
+  </div>
+  
+  <!-- Icônes de temps, argent, santé -->
+  <div class="w3-hide grid grid-cols-3 gap-4 mt-4">
+    <!-- Icône de temps -->
+    <i class="fas fa-clock fa-2x text-gray-300" title="🍅 Pomodoro timer"></i>
+    <!-- Icône d'argent -->
+    <i class="fas fa-coins fa-2x text-yellow-400" title="📊 Finance ratio"></i>
+    <!-- Icône de Calories -->
+    <i class="fas fa-heartbeat fa-2x text-red-500">
+      <!-- Energy Bar -->
+      <div class="bg-orange-700 rounded mt-1" title="🍗 Calorie intake">
+        <div class="bg-orange-500 text-xs leading-none py-1 text-center text-white" style="width: 75%;">
+          75% 🔋
+        </div>
+      </div>
+    </i>
+  </div>
+
+</div>
 

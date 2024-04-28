@@ -39,30 +39,39 @@ const getProduct = (req, res, next) => {
       return next(error);
     });
 };
+
 const getHomepage = (req, res, next) => {
   const page = +req.query.page || 1;
   const limit = 8;
 
-  shopService.getProducts(page, limit)
-    .then(({ count, products }) => {
-      res.render('shop/index', {
-        pageTitle: 'Home',
-        path: '/',
-        prods: products,
-        currentPage: page,
-        hasNextPage: limit * page < count,
-        hasPreviousPage: page > 1,
-        nextPage: page + 1,
-        previousPage: page - 1,
-        lastPage: Math.ceil(count / limit),
-      });
-    })
-    .catch((err) => {
-      const error = new Error(err);
-      error.httpStatusCode = 500;
-      return next(error);
+  // Assurez-vous que l'utilisateur est connecté et que req.user.id est disponible
+  Promise.all([
+    shopService.getProducts(page, limit),
+    shopService.getAddressByUserId(req.user.id)
+  ]).then(([productsResult, addressInfo]) => {
+    const { count, products } = productsResult;
+    const firstname = addressInfo.firstname; // Assurez-vous que la clé 'firstname' correspond à votre structure de données
+
+    res.render('shop/index', {
+      pageTitle: 'Home',
+      path: '/',
+      prods: products,
+      currentPage: page,
+      hasNextPage: limit * page < count,
+      hasPreviousPage: page > 1,
+      nextPage: page + 1,
+      previousPage: page - 1,
+      lastPage: Math.ceil(count / limit),
+      firstname: firstname // Ajoutez cette ligne pour passer le prénom à la vue
     });
+  }).catch((err) => {
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    return next(error);
+  });
 };
+
+
 const getCart = (req, res, next) => {
   shopService.getCart(req.user)
     .then((products) => {
@@ -151,11 +160,23 @@ const getAbout = (req, res, next) => {
   });
 };
 const getContact = (req, res, next) => {
-  res.render('shop/contact', {
-    pageTitle: 'About',
-    path: '/about',
-  });
+  // Assurez-vous que req.user.id est défini et correspond à l'identifiant de l'utilisateur connecté
+  shopService.getAddressByUserId(req.user.id)
+    .then((shipmentAddress) => {
+      const lastName = shipmentAddress.lastname; // Assurez-vous que la clé 'lastname' correspond à votre structure de données
+      res.render('shop/contact', {
+        pageTitle: 'Contact',
+        path: '/contact',
+        lastName: lastName
+      });
+    })
+    .catch((err) => {
+      const error = new Error(err);
+      error.httpStatusCode = 500;
+      return next(error);
+    });
 };
+
 const getMyPage = (req, res, next) => {
   Promise.all([
     shopService.getOrders(req.user.id),

@@ -1,0 +1,52 @@
+<div class="uk-grid" style="margin-top: 75px;" uk-grid>
+  <div class="uk-width-1-1">
+    <div class="action-bar">
+      <div>
+        <h3>DNA Details</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="uk-width-1-2@s">
+    <div class="ui-text-field">Poids / Weight</div>
+    <input name="inputPoids" id="inputPoids" class="ui-input uk-input uk-form-medium" type="number" value="" placeholder="Entrez votre poids">
+  </div>
+
+  <div class="uk-width-1-2@s">
+    <!-- Éventuellement ajouter d'autres contenus ou interactions ici -->
+  </div>
+</div>
+
+<script>
+    function enregistrerPoids() {
+        var poids = document.getElementById("inputPoids").value;
+        if (poids) {
+            document.cookie = "poids=" + encodeURIComponent(poids) + ";path=/";
+        }
+    }
+
+    function afficherPoids() {
+        var cookies = document.cookie.split(';');
+        var poids = "";
+        for (var i = 0; i < cookies.length; i++) {
+            var parts = cookies[i].split('=');
+            if (parts[0].trim() === "poids") {
+                poids = decodeURIComponent(parts[1]);
+                break;
+            }
+        }
+        var inputPoids = document.getElementById("inputPoids");
+        inputPoids.value = poids;
+    }
+
+    function verifierPoidsCookie() {
+        if (document.cookie.indexOf('poids=') >= 0) {
+            afficherPoids();
+        }
+    }
+
+    window.onload = verifierPoidsCookie;
+
+    // Ajoute un écouteur d'événement pour enregistrer les modifications de poids dès qu'elles sont faites
+    document.getElementById("inputPoids").addEventListener('change', enregistrerPoids);
+</script>

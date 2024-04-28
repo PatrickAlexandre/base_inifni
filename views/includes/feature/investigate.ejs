@@ -1,0 +1,32 @@
+<p><input required="" id="email-investigation" placeholder="test@example.com" class="w3-border" type="email" autocomplete="email" style="max-width: 100%;"></p>
+<p><input required="" id="tel-investigation" placeholder="+33601020304" class="w3-border" type="tel" autocomplete="tel" style="max-width: 100%;"></p>
+
+<button type="button" class="w3-button w3-theme" onclick="investigation()"><i class="fa fa-magnifying-glass"></i> Search</button>
+
+<script>
+function investigation() {
+  var emailInput = document.getElementById('email-investigation').value;
+  var phoneInput = document.getElementById('tel-investigation').value;
+  var baseUrl = "https://epieos.com/?q=";
+  
+  if (emailInput !== '' && emailInput.includes('@')) {
+    var encodedEmail = encodeURIComponent(emailInput);
+    var emailUrl = baseUrl + encodedEmail + "&t=email";
+    window.open(emailUrl, '_blank');
+  } else if (emailInput !== '' && !emailInput.includes('@')) {
+    alert("Please enter a valid email address.");
+  }
+  
+  if (phoneInput !== '' && phoneInput.startsWith('+')) {
+    var encodedPhone = encodeURIComponent(phoneInput);
+    var phoneUrl = baseUrl + encodedPhone + "&t=phone";
+    window.open(phoneUrl, '_blank');
+  } else if (phoneInput !== '' && !phoneInput.startsWith('+')) {
+    alert("Please enter a valid phone number starting with '+'.");
+  }
+  
+  if (emailInput === '' && phoneInput === '') {
+    alert("Please enter an email or phone number to search.");
+  }
+}
+</script>
