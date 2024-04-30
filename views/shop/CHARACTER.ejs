@@ -1,66 +1,36 @@
+<!-- [CSS:W3Template] -->
+<div class="w3-card w3-round w3-theme-d1 w3-margin w3-center" style="display: flex;">
 
-
-  <style>
-  /* Styles personnalisés pour l'insigne de niveau */
-  .level-badge {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #4B5563; /* Fond gris */
-    color: white;
-    padding: 2px 6px;
-    border-radius: 0.375rem; /* rounded-md */
-    font-size: 0.75rem; /* text-xs */
-  }
-  </style>
-
-<!-- Tailwind OFF sur Mobile Device = Use -> [W3C Class & CSS] ONLY -->
-
-<div class="w3-card w3-round p-4 w3-margin">
-  <div class="flex items-end" >
-    <!-- Avatar à gauche -->
-    <div class="relative mr-2">
-      <img class="w-16 h-16 w3-circle border-2 border-yellow-300" src="https://i.gifer.com/6Dg.gif" alt="AI Avatar">
-      <div class="level-badge">0</div>
+    <!-- Container for avatar and age/moons -->
+    <div class="avatar-info" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+      <!-- Avatar -->
+      <div class="avatar">
+        <img class="w3-circle" src="https://i.gifer.com/6Dg.gif" alt="AI Avatar" style="width: 60px; height: 60px;">
+        <span id="current-age"></span>
+      </div>
+      
     </div>
 
-    <!-- Nom et barres de santé/mana -->
-    <div class="flex flex-col">
+    <!-- Right side grid for additional info -->
+    <div style="flex: 2; display: grid; gap: 20px;">
+      <!-- Nom et barres de santé/mana -->
+      <div class="player-info">
+        <!-- Nom du personnage -->
+        <h1>%= firstname %</h1>
 
-      <!-- Nom du personnage -->
-      <h1 class="text-white text-lg mb-1">Bienvenue, <%= firstname %>!</h1>
-
-
-      <!-- Barre de santé -->
-      <div class="w-32 bg-green-700 rounded" title="❤️ Remaining Life">
-        <div class="bg-green-500 text-xs leading-none py-1 text-center text-white" style="width: 100%;">(100%) 0 / 79</div>
-      </div>
-      <!-- Barre de mana -->
-      <div class="w-32 bg-blue-700 rounded mt-1" title="🧠 Mental Load">
-        <div class="bg-blue-500 text-xs leading-none py-1 text-center text-white" style="width: 25%;">25%</div>
-      </div>
-
-
-    </div>
-  </div>
-  
-  <!-- Icônes de temps, argent, santé -->
-  <div class="w3-hide grid grid-cols-3 gap-4 mt-4">
-    <!-- Icône de temps -->
-    <i class="fas fa-clock fa-2x text-gray-300" title="🍅 Pomodoro timer"></i>
-    <!-- Icône d'argent -->
-    <i class="fas fa-coins fa-2x text-yellow-400" title="📊 Finance ratio"></i>
-    <!-- Icône de Calories -->
-    <i class="fas fa-heartbeat fa-2x text-red-500">
-      <!-- Energy Bar -->
-      <div class="bg-orange-700 rounded mt-1" title="🍗 Calorie intake">
-        <div class="bg-orange-500 text-xs leading-none py-1 text-center text-white" style="width: 75%;">
-          75% 🔋
+        <div id="esperanceHP" class="progress-container" title="❤️ Health">
+          <div class="progress-bar progress-container"></div>
         </div>
+
+        <div id="energy-bar" class="w3-hide progress-bar progress-border progress-container bg-druid" title="🍗 Calorie" style="width: 100%;">
+        </div>
+
+        <p id="nights-lived" class="w3-right-align" title="Moons collected"></p>
+
       </div>
-    </i>
-  </div>
+    </div>
 
 </div>
+  
+  <script src="/js/LifeTimeCalory.js"></script>
 

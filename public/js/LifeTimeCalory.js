@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let lifeExpectancy = { male: 79.3, female: 85.3 }; // Average life expectancy in France by gender
   setDefaultDate();
 
+
   function setDefaultDate() {
       var today = new Date(); // Obtient la date actuelle
       today.setDate(today.getDate());
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById('BirthDate').value = yesterday; // Définit la valeur
   }
 
+
   // Calculate BMR using function incorporating the Harris-Benedict formula
   function calculateBMR(weight, height, age, gender) {
     if (gender === "male") {
@@ -29,16 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
       throw new Error("Invalid gender. Please enter 'male' or 'female'.");
     }
   }
-
-  // Calculate BMR using the Mifflin-St Jeor Equation
-//  function calculateBMR(weight, height, age, gender) {
-//    if (gender === 'male') {
-//      return (10 * weight) + (6.25 * height) - (5 * age) + 5;
-//    } else {
-//      return (10 * weight) + (6.25 * height) - (5 * age) - 161;
-//    }
-//  }
   
+
   // Calculate life expectancy percentage
   function calculateLifeExpectancyPercent(age, gender) {
     let expectancy = lifeExpectancy[gender];
@@ -46,13 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
     return lived.toFixed(2); // Returns a string with 2 digits after the decimal point
   }
 
+
   // Update BMR progress bar
   function updateBMRProgress() {
     let bmr = calculateBMR(weight, height, age, gender);
     // Assuming you have a progress bar for BMR and its max value set to an estimated daily requirement
     document.getElementById('energy-bar').style.width = `${(bmr / 2500) * 100}%`;
-    document.getElementById('energy-bar').innerText = `Energy  ${bmr.toFixed(0)} kCal`;
+    document.getElementById('energy-bar').innerText = `${bmr.toFixed(0)} kcal`;
   }
+
 
   //BUG  Update life expectancy progress bar
   function updateLifeExpectancyProgress() {
@@ -60,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //document.getElementById('BirthDate').style.width = `${lifePercent}%`;
     //document.getElementById('BirthDate').innerText = `${lifePercent}% of life expectancy`;
   }
+
 
   // Initial update on load
   updateBMRProgress();

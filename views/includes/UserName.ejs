@@ -1,24 +1,61 @@
-<div class="profile-section w3-center" title="Tamagotchi たまごっち">
-    <img src="https://i.gifer.com/6Dg.gif" alt="Avatar" class="w3-circle" style="height:106px;width:106px">
+<style>
+    .profile-section {
+display: flex;
+border: 1px solid #ccc; /* Bordure pour la section profil */
+padding: 10px;
+align-items: center; /* Centrage vertical des éléments */
+}
 
-    <div class="w3-text-grey w3-left-align" title="🌠 Chronique des Âges Éternels">
-        <div id="current-age" title="EXP"></div>
-        <div id="nights-lived" title="Moons collected"></div>
+.avatar {
+flex: 1; /* L'avatar prend 1 portion de l'espace disponible */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.player-info {
+flex: 2; /* Les informations prennent 2 portions */
+display: flex;
+flex-direction: column;
+justify-content: space-around; /* Espacement vertical entre les sous-sections */
+}
+
+}
+
+</style>
+
+<div class="profile-section w3-black" title="たまごっち" style="width:300px;">
+
+    <!-- Avatar -->
+    <div class="avatar">
+        <img src="https://i.gifer.com/6Dg.gif" alt="Avatar" style="height:106px;width:106px">
     </div>
-    
+
+    <!-- Informations du joueur, grille ou colonne -->
+    <div class="player-info w3-center">
+
+        <!-- ID joueur -->
+        <div class="name-section">
+   
+        </div>
+        
+        <div class="progress-section">
+            
+            <div class="w3-hide"><!-- Barre de progression -->
+                <div class="w3-container w3-blue w3-padding w3-center" style="width:65%">65%</div>
+                <div class="w3-container w3-red w3-padding w3-center" style="width:85%">85 k</div>
+            </div>
+        </div>
+
+          
+    </div>
+
 </div>
 
-<!-- Progress Bars -->
-<div class="info-section w3-center">
 
-    <strong contenteditable="true">Name</strong>
+<div class="w3-card"><!-- ProgressBar ❤️🍗 -->
 
-    <div id="esperanceHP" class="progress-container" title="❤️ Health">
-        <div class="progress-bar progress-container"></div>
-    </div>
 
-    <div id="energy-bar" class="progress-bar progress-border progress-container bg-rogue" title="🍗 Energy" style="width: 100%;">
-    </div>
 
     <!-- Time, money, health => (Bleu, Vert, Blanc.)(Anneau, Vertical, Horizontal. STATUS)
     <br>
@@ -37,9 +74,9 @@
     -->
 
 </div>
-    
 
-<script src="/js/LifeTimeCalory.js"></script>
+
+
 
 
 
