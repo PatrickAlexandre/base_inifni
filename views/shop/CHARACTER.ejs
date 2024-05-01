@@ -1,12 +1,12 @@
 <!-- [CSS:W3Template] -->
-<div class="w3-card w3-round w3-theme-d1 w3-margin w3-center" style="display: flex;">
+<div class="w3-card w3-round w3-theme-d5 w3-margin-bottom" style="display: flex;">
 
     <!-- Container for avatar and age/moons -->
     <div class="avatar-info" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
       <!-- Avatar -->
       <div class="avatar">
         <img class="w3-circle" src="https://i.gifer.com/6Dg.gif" alt="AI Avatar" style="width: 60px; height: 60px;">
-        <span id="current-age"></span>
+        <span id="current-age" class="w3-center"></span>
       </div>
       
     </div>
@@ -14,18 +14,17 @@
     <!-- Right side grid for additional info -->
     <div style="flex: 2; display: grid; gap: 20px;">
       <!-- Nom et barres de santé/mana -->
-      <div class="player-info">
+      <div class="player-info w3-row-padding">
         <!-- Nom du personnage -->
-        <h1>%= firstname %</h1>
+        <h1 class="w3-padding-16">%firstname%</h1>
 
         <div id="esperanceHP" class="progress-container" title="❤️ Health">
           <div class="progress-bar progress-container"></div>
         </div>
 
-        <div id="energy-bar" class="w3-hide progress-bar progress-border progress-container bg-druid" title="🍗 Calorie" style="width: 100%;">
-        </div>
+        <iframe src="https://indify.co/widgets/live/progressBar/Net5fpilT6pCNs0ZE79L" width="100%" height="30px" frameborder="0" class="w3-hide"></iframe>
 
-        <p id="nights-lived" class="w3-right-align" title="Moons collected"></p>
+        <p id="nights-lived" title="Moons collected" class="w3-text-grey"></p>
 
       </div>
     </div>

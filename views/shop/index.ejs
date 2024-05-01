@@ -16,35 +16,26 @@
     <div class="w3-col m3">
 
 
-        <!-- Profile -->
-        <%- include('../shop/CHARACTER.ejs') %>
-
-        
-
-
-
-
-
-      <div class="w3-card w3-round w3-theme-l4 w3-padding w3-margin">
-        <%- include('../auth/BirthDate-C23.ejs') %>
-      </div>
+      <!-- Profile -->
+      <%- include('../shop/CHARACTER.ejs') %>
 
       <!-- Accordion -->
       <div class="w3-card w3-round">
         <div class="w3-white">
+
           <button class="w3-hide w3-small w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa-regular fa-chart-bar w3-margin-right"></i> General</button>
           <div id="Demo1" class="w3-hide w3-container">
             <p>Some text..</p>
           </div>
+
           <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Preferences</button>
           <div id="Demo2" class="w3-hide w3-container">
             <%- include('../includes/Traits.ejs') %>
           </div>
-          <button onclick="myFunction('Demo3')" class="w3-hide-medium w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> Trade</button>
+
+          <button onclick="myFunction('Demo3')" class="w3-hide w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> Trade</button>
           <div id="Demo3" class="w3-hide w3-container">
          <div class="w3-row-padding">
-            <%- include('../shop/Playlist.ejs') %>
-         <br>
            <div class="w3-half">
              <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
            </div>
@@ -65,6 +56,7 @@
            </div>
          </div>
           </div>
+
         </div>      
       </div>
 
@@ -88,19 +80,16 @@
           </p>
         </div>
       </div>
-      <br>
       
       <!-- Alert Box -->
-      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+      <div class="w3-hide w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom">
         <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
           <i class="fa fa-remove"></i>
         </span>
         <p><strong>Hey!</strong></p>
         <p>People are looking at your profile. Find out who.</p>
       </div>
-      <br>
 
-      <%- include('../includes/live_chat.ejs') %>
 
     <!-- End Left Column -->
     </div>
@@ -151,7 +140,7 @@
         </div>
       </div>
 
-      <div class="w3-hide-small w3-card w3-round w3-theme-d1 w3-left-align w3-margin-bottom">
+      <div class="w3-hide w3-card w3-round w3-theme-d1 w3-left-align w3-margin-bottom">
           <div class="w3-container">
 
             <iframe src="https://www.google.com/maps/embed?pb=!4v1614665800225!6m8!1m7!1sCAoSLEFGMVFpcE5Dak9fY3ROaUZkZ0F3R1MtTDNzMWZjQk5oV1l3d0N6UHBJN0J3!2m2!1d38.787587279589205!2d-9.390556084601305!3f0!4f0!5f0.7820865974627469" 
@@ -172,7 +161,7 @@
 
       </div>
 
-      <div class="w3-hide w3-margin-large">
+      <div class="w3-hide w3-margin-bottom">
         <%- include('../shop/Playlist.ejs') %>
       </div>
 
@@ -212,13 +201,22 @@
       <br>
       
 
-      <div class="w3-hide-small w3-card w3-round w3-white w3-padding-32 w3-center">
+      <div class="w3-hide w3-card w3-round w3-white w3-padding-32 w3-center">
         <p><i class="fa fa-bug w3-xxlarge"></i></p>
       </div>
 
-      <div class="w3-hide-small w3-card w3-round w3-white w3-padding-32 w3-center w3-margin-top">
+      <a href="https://chat.openai.com/g/g-3VrgJ1GpH-sous-chef" target="_blank" title="Sous Chef">
+        <div class="w3-card w3-round w3-white w3-padding-32 w3-center w3-margin w3-hide-medium">
+          <p><i class="fa-solid fa-utensils w3-xxlarge"></i></p>
+          <div id="energy-bar" class="progress-bar progress-border progress-container bg-druid w3-margin" title="🍗 Calorie" style="width: 100%;">
+          </div>
+          <p class="w3-text-grey">I’ll give you recipes based on the foods you love and ingredients you have</p>
+        </div>
+      </a>
+
+
+      <div class="w3-hide w3-card w3-round w3-white w3-padding-32 w3-center w3-margin-top">
         <p><i class="fa-solid fa-coins w3-xxlarge"></i></p>
-        
         <!-- Section Revenus/Dépenses -->
         <div class="w3-hide income-expenses-section">
           <h2>Income | Expenses</h2>
@@ -239,13 +237,7 @@
         </div>
       </div>
 
-       <div class="w3-card w3-round w3-theme-d1 w3-row-padding w3-margin-top w3-center">
- 
-          Uncover What You're Missing <h5><i class="fa-solid fa-user-secret"></i> One Click to Reveal Hidden Profiles</h5>
-          <p class="w3-opacity"> fonction de recherche inversée par e-mail ou téléphone.</p>
-          <%- include('../includes/feature/investigate.ejs') %>
 
-      </div>
 
     <!-- End Right Column -->
     </div>

@@ -30,13 +30,9 @@
           <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Log In</a>
         </li>
       <% } else { %>
+
         <li class="main-header__item">
-          <a class="<%= path === '/mypage' ? 'active' : '' %>" href="/mypage">My Page</a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fa-solid fa-ranking-star"></i> Ranking
-          </a>
+          <a class="<%= path === '/mypage' ? 'active' : '' %>" href="/mypage"><i class="fa-solid fa-ranking-star"></i> My Page</a>
         </li>
 
         <li class="main-header__item">
@@ -46,6 +42,7 @@
             </button>
           </form>
         </li>
+
         <li>
           <a href="/cart">
             <span class="uk-icon ui-icon" uk-tooltip="title: View cart items" uk-icon="icon: cart"></span>
