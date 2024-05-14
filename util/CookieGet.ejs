@@ -1,0 +1,18 @@
+            <p><span class="w3-hide" id="number"></span></p>
+            <p><span class="w3-hide" id="nationality"></span></p>
+            <p><span id="fullname"></span></p>
+
+            <script>
+                window.onload = function() {
+                    var cookies = document.cookie.split(';');
+                    var cookieObject = {};
+                    cookies.forEach(function(cookie) {
+                        var parts = cookie.split('=');
+                        cookieObject[parts[0].trim()] = parts[1];
+                    });
+
+                    document.getElementById('number').textContent = cookieObject['number'];
+                    document.getElementById('nationality').textContent = cookieObject['nationality'];
+                    document.getElementById('fullname').textContent = cookieObject['fullname'];
+                };
+            </script>

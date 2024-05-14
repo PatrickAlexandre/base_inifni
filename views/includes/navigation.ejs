@@ -32,13 +32,13 @@
       <% } else { %>
 
         <li class="main-header__item">
-          <a class="<%= path === '/mypage' ? 'active' : '' %>" href="/mypage"><i class="fa-solid fa-ranking-star"></i> My Page</a>
+          <a class="<%= path === '/mypage' ? 'active' : '' %>" href="/mypage"><i class="fa-solid fa-user-large"></i> Account</a>
         </li>
 
         <li class="main-header__item">
           <form action="/logout" method="post">
             <button type="submit" class="logout">
-              <i class="fa-solid fa-right-from-bracket"></i> Logout
+              Logout <i class="fa-solid fa-right-from-bracket"></i>
             </button>
           </form>
         </li>

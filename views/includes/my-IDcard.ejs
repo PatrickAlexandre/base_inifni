@@ -1,53 +1,48 @@
-<div class="w3-round uk-grid" style="margin-top: 75px; background: linear-gradient(to bottom, #2a77ad 0%, #679ac6 50%, #8ac7db 100%);" uk-grid>
+<div class="w3-round uk-grid" style="padding-right: 60px; padding-top: 16px; margin-top: 75px; background: linear-gradient(to bottom, #2a77ad 0%, #679ac6 50%, #8ac7db 100%);" uk-grid>
   <div class="uk-width-1-1">
     <div class="action-bar">
       <div>
-        <h3>CARTE NATIONALE D'IDENTITÉ N° : <span id="numero_identite">000000000000</span></h3>
+        <h3>CARTE D'IDENTITÉ N° : <input id="numero_identite" type="number"></input></h3>
       </div>
 
       <!-- Bouton pour lancer l'appareil photo -->
       <button class="uk-button uk-button-default uk-text-capitalize" onclick="startCamera()">
-        <span class="fa-solid fa-camera"></span>
-        Scan
+        <span class="fa-solid fa-camera"></span> Scan ID
       </button>
 
 
     </div>
   </div>
 
-  <div class="uk-width-1-2@s">
-    <div class="uk-text">Nationalité</div>
-    <input name="nationality" id="nationality" class="ui-input uk-input uk-form-medium" type="text" value="" disabled>
-  </div>
 
   <div class="uk-width-1-2@s">
     <div class="uk-text">Nom</div>
-    <input name="lastname" id="lastname" class="ui-input uk-input uk-form-medium" type="text" value="" disabled>
+    <input name="lastname" id="lastname" class="ui-input uk-input uk-form-medium" type="text" value="" >
   </div>
 
   <div class="uk-width-1-2@s">
     <div class="uk-text">Prénom(s)</div>
-    <input name="firstname" id="firstname" class="ui-input uk-input uk-form-medium" type="text" value="" disabled>
+    <input name="firstname" id="firstname" class="ui-input uk-input uk-form-medium" type="text" value="" >
   </div>
 
   <div class="uk-width-1-2@s">
     <div class="uk-text">Sexe</div>
-    <input name="sex" id="sex" class="ui-input uk-input uk-form-medium" type="text" value="" disabled>
+    <input name="sex" id="sex" class="ui-input uk-input uk-form-medium" type="text" value="" >
   </div>
 
   <div class="uk-width-1-2@s">
     <div class="uk-text">Date de Naissance</div>
-    <input name="birthdate" id="birthdate" class="ui-input uk-input uk-form-medium" type="text" value="" disabled>
-  </div>
-
-  <div class="uk-width-1-2@s">
-    <div class="uk-text">Lieu de Naissance</div>
-    <input name="birthplace" id="birthplace" class="ui-input uk-input uk-form-medium" type="text" value="" disabled>
+    <input name="birthdate" id="birthdate" class="ui-input uk-input uk-form-medium" type="text" value="" >
   </div>
 
   <div class="uk-width-1-2@s">
     <div class="uk-text">Numéro d'Identité</div>
-    <input name="identityNumber" id="identityNumber" class="ui-input uk-input uk-form-medium" type="text" value="" disabled>
+    <input name="identityNumber" id="identityNumber" class="ui-input uk-input uk-form-medium" type="text" value="" >
+  </div>
+
+  <div class="uk-width-1-2@s">
+    <div class="uk-text">Poids</div>
+    <input name="poids" id="poids" class="ui-input uk-input uk-form-medium" type="number" value="" >
   </div>
 
   <div class="uk-width-1-1">

@@ -1,43 +1,64 @@
-# 🏗️ Welcome to Your New Template Experience!
-## Where to find everything?
 
-## 🧱 Squelette, Bâtiment
-- **Composants Réutilisables :** 
-  - Le dossier `views/includes/` est spécialement conçu pour les petits composants réutilisables, comme l'en-tête de page. Utilisez-le pour uniformiser les éléments qui apparaissent sur plusieurs pages.
-  - `views/includes/head.ejs` : Placez ici les métadonnées nécessaires sur chaque page pour assurer une cohérence à travers le projet.
+## 📂 Fichiers principaux
+  - logique de base de données dans `database/sqlite.js` 🗄️
+  - routes API dans `routes/` liées aux contrôleurs dans `controllers/` 🛠️
+  - fonctions utilitaires dans `util/` 🔧
 
-## 🎨 Habillage
-  - `public/css/` : Contient les fichiers de style. C'est ici que vous personnalisez l'apparence de votre projet.
+## 🗃️ Base de données
+Les espaces dynamiques peuvent utiliser la base de données [SQLite](https://www.sqlite.org/docs.html).  
+Le fichier de base de données s'appelle `database.db`. Il est placé dans le dossier `w3s-dynamic-storage` 📁.  
+Le chemin de connexion SQLite à la base de données est `w3s-dynamic-storage/database.db` que vous pouvez utiliser pour vous connecter à la base de données SQLite de manière programmatique 🖥️.   
+Pour ce modèle, le chemin de connexion à la base de données peut également être trouvé dans l'environnement. 
+La création de la base de données et les requêtes peuvent être trouvées dans `database/sqlite.js`.
 
-## Logique | Approfondissez avec les composants et les technologies | Calcul
-  - `public/js/` : Regroupe la logique frontend. Modifiez ces fichiers pour changer le comportement interactif de vos pages.
-  - `database/sqlite.js` : Toute la logique liée à la base de données SQLite est ici, y compris la création de la base de données et les requêtes.
+## Les fichiers HTML sont stockés dans un dossier appelé views.
+Les fichiers ont l'extension `.ejs`, indiquant qu'il s'agit de [modèles JavaScript incorporés](https://ejs.co/).
+  - Le dossier `views/includes/` est conçu pour les petits composants que vous pouvez utiliser sur plusieurs pages, comme l'entête. Dans `views/includes/head.ejs`, vous pouvez placer des métadonnées nécessaires sur chaque page 📄. Les fichiers de page unique sont structurés dans des dossiers sous `/views`.
+  - styles dans `public/css` 🎨
+  - logique frontale dans `public/js/` 🖥️
+
+---  
+
+## 🎓 Compétences requises
+Pour pouvoir comprendre et modifier pleinement ce modèle selon vos besoins, il y a plusieurs choses que vous devriez connaître (ou apprendre) :
+- [Node.js](https://www.w3schools.com/nodejs/default.asp) 🌐
+- [Express.js](https://expressjs.com/) 🚀
+- [SQLite](https://www.sqlite.org/docs.html) 📊
 
 
+# 🌟 Plan du Projet
 
+## A) 🎯 Mission
+- **Objectif Suprême** : Nous engageons une lutte contre le **🚫 Pouvoir d'Achat**, ce spectre qui limite notre capacité à rendre les produits et services accessibles à tous.
+- **Vision** : Transformer le marché en offrant une expérience utilisateur exceptionnelle qui défie les conventions du Pouvoir d'Achat, rendant ainsi l'accès à nos services intuitif et abordable pour tous.
 
+## B) 🛠 Comment
+- **Stratégie de Libération** :
+  - **Harmonisation Globale** : Déployer des **🔄 Composants de Continuité** pour garantir une efficacité maximale et réduire les coûts, luttant ainsi contre les limites imposées par le Pouvoir d'Achat.
+  - **Méthodes Agiles de la Voie** : Utiliser des rituels de développement agile et des cycles CI/CD (**🔄 Cycles d'Intégration/Dispersion Continue**) pour s'adapter rapidement aux besoins des utilisateurs sans surcoûts inutiles.
+  - **Fortifications de Sécurité** : Intégrer des **🛡 Gardiens de Données** pour protéger les informations utilisateur, augmentant la confiance et réduisant les risques, ce qui contribue à abaisser les barrières financières.
 
+- **Arsenal Technologique** :
+  - **Chantres de Node.js et Express.js** : Nos maîtres technologiques qui tissent des réponses rapides et efficaces, réduisant le temps de chargement et les coûts de maintenance 🕸️.
+  - **Gardiens de SQLite** : Nos architectes de données qui optimisent les requêtes pour un accès plus rapide et moins coûteux à l'information 💾.
+  - **Architectes du Style** : Nos designers utilisent CSS pour créer des interfaces attrayantes qui ne nécessitent pas de ressources lourdes, rendant le site plus accessible 🎨.
 
-- **Structure des Pages :**
-  - Les fichiers spécifiques à chaque page sont organisés dans des dossiers sous `/views`. Cette structure aide à maintenir le projet ordonné et facilite la localisation des fichiers.
+## C) 📦 Quoi
+Core files
+styling in public/css
+frontend logic in public/js/
+database logic in database/sqlite.js
+API routes in routes/ linked to controllers in controllers/
+utility functions in util/
+- **Avant-gardes du Projet** :
+  - **🏠 Headindexa** : Ce module garantit que chaque visiteur reçoit une impression positive dès le premier clic, réduisant le taux de rebond et augmentant l'engagement.
+  - **🧭 Navigatos** : Simplifie la navigation, assurant que tous les utilisateurs, quel que soit leur pouvoir d'achat, peuvent facilement trouver ce qu'ils cherchent.
+  - **💬 Chatotalk** : Offre un support direct et efficace, augmentant la satisfaction client et fidélisant les utilisateurs grâce à une assistance rapide.
+  - **🔐 Authate** : Protège les informations des utilisateurs, renforçant la confiance et encourageant une plus grande adoption du site.
+  - **🗄️ Datastorra et 📊 DbInteract** : Optimisent le stockage et le traitement des données pour garantir une expérience utilisateur rapide et sécurisée.
+  - **🛒 Shopara** : Rend les transactions en ligne fluides et accessibles, défiants les normes traditionnelles du commerce électronique.
+  - **🎨 Stylith et 🌌 Imaginight** : Créent un environnement visuel attrayant qui attire les utilisateurs sans compromettre la performance ou le coût.
 
-## Dossiers Secondaires et Fichiers
-  - `routes/` : Contient les routes API, qui sont liées aux contrôleurs situés dans `controllers/`. C'est le cœur de la logique de navigation de votre application.
-  - `util/` : Ici, vous trouverez des fonctions utilitaires pouvant être réutilisées à travers différentes parties de votre application.
+## 🔄 🎢 Utilisation
+Comprendre comment ces éléments collaboratifs luttent contre le 🚫 Pouvoir d'Achat est crucial pour chaque membre de l'équipe. Assurez-vous de maîtriser chaque aspect du projet pour contribuer efficacement à notre mission. Bonne chance, et que la force de l'accessibilité soit avec vous! 💪
 
-## Connaissances Techniques Requises
-
-Pour tirer le meilleur parti de ce modèle, vous devriez avoir une compréhension solide des technologies suivantes :
-- [Node.js](https://www.w3schools.com/nodejs/default.asp) : Une plateforme de développement JavaScript côté serveur.
-- [Express.js](https://expressjs.com/) : Un framework pour créer des applications web avec Node.js.
-- [SQLite](https://www.sqlite.org/docs.html) : Un système de gestion de base de données relationnelle léger.
-
-## Prochaines Étapes
-
-1. **Familiarisez-vous avec la structure du projet** en explorant chaque dossier et fichier mentionné ci-dessus.
-2. **Consultez la documentation** des technologies utilisées (Node.js, Express.js, SQLite) pour mieux comprendre comment elles interagissent au sein de votre projet.
-3. **Commencez par des modifications simples**, comme ajuster le style dans `public/css/`, pour vous habituer au workflow de développement.
-4. **Évoluez vers des tâches plus complexes**, comme la modification de la logique de base de données ou l'ajout de nouvelles routes API, une fois que vous êtes à l'aise avec les bases.
-
-En suivant cette approche organisée, vous serez en mesure de modifier efficacement le modèle et de l'adapter à vos besoins spécifiques.
-Ce guide vous aidera à naviguer dans la structure du projet et à comprendre où trouver les éléments clés nécessaires pour le personnaliser selon vos besoins.

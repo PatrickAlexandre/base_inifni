@@ -13,7 +13,8 @@ const initialize = () => {
     'CREATE TABLE IF NOT EXISTS Users (id TEXT PRIMARY KEY, email TEXT, password TEXT, role TEXT, resetToken TEXT, cart TEXT)',
     'CREATE TABLE IF NOT EXISTS ShipmentAddresses (id TEXT PRIMARY KEY, userId TEXT, address TEXT)',
     'CREATE TABLE IF NOT EXISTS Products (id TEXT PRIMARY KEY, title TEXT, price REAL, description TEXT, imageUrl TEXT, imageKey TEXT, details LONGTEXT)',
-    'CREATE TABLE IF NOT EXISTS Orders (id TEXT PRIMARY KEY, userId TEXT, email TEXT, date TEXT, products TEXT)'
+    'CREATE TABLE IF NOT EXISTS Orders (id TEXT PRIMARY KEY, userId TEXT, email TEXT, date TEXT, products TEXT)',
+    'CREATE TABLE IF NOT EXISTS IDentity (id TEXT PRIMARY KEY, userId TEXT, birthdate TEXT, gender TEXT, firstname TEXT, lastname TEXT, email TEXT)'
   ];
 
   createTableQueries.forEach((query) => {
@@ -21,6 +22,33 @@ const initialize = () => {
   })
   return Promise.resolve(db);
 };
+
+
+
+  /* 
+  const createIdentity = (identityInfo) => {
+    return new Promise((resolve, reject) => {
+      try {
+        const { userId, birthdate, gender, firstname, lastname, email } = identityInfo;
+        const stmt = db.prepare('INSERT INTO IDentity (id, userId, birthdate, gender, firstname, lastname, email) VALUES (?, ?, ?, ?, ?, ?, ?)');
+        stmt.run(uuidV4.uuid(), userId, birthdate, gender, firstname, lastname, email);
+        resolve(true);
+      } catch (err) {
+        console.log('Erreur : to create identity', err);
+        reject(err);
+      }
+    });
+  };
+      const exampleIdentityInfo = {
+        userId: '99887',
+        birthdate: '1997-01-01',
+        gender: 'Female',
+        firstname: 'Alo',
+        lastname: 'Da',
+        email: 'jodo@exe.io'
+      };
+  createIdentity(exampleIdentityInfo);
+      */
 
 
 

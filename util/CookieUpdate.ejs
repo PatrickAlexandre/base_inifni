@@ -1,0 +1,23 @@
+<%- include('../includes/IDform.ejs') %>
+
+<form id="profileIDForm">
+
+    <label for="number">Numéro: </label>
+    <input type="text" id="number" name="number" onchange="saveData('number', this.value)">
+    <br>
+
+    <label for="nationality">Nationalité: </label>
+    <input type="text" id="nationality" name="nationality" onchange="saveData('nationality', this.value)">
+    <br>
+
+    <label for="fullname">Nom complet: </label>
+    <input type="text" id="fullname" name="fullname" onchange="saveData('fullname', this.value)">
+    <br>
+
+</form>
+
+<script>
+    function saveData(cookieName, cookieValue) {
+        document.cookie = cookieName + "=" + cookieValue + "; path=/";
+    }
+</script>
